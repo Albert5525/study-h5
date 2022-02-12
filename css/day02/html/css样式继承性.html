@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS样式继承性</title>
+    <style>
+
+        /* 
+            CSS样式具有继承性
+            概念：
+                子标签汇集成福标签的某些样式，如文本颜色和字号。
+                想要设置一个科技城的属性，只需将它应用于父元素即可。
+            简单理解就是：子承父业
+            注意：
+                恰当的使用集成可以简化代码，降低CSS样式的复杂性。比如有很多子级孩子都需要某个样式，可以给父亲级指定一个，这些孩子集成过来就好了。
+                子元素可以继承父元素的样式（text-,font-,line-这些元素开头的可以集成，以及color属性）。
+            CSS继承口诀：龙生龙，凤生凤，老鼠生的孩子会打洞。
+         */
+        div {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>王思聪</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>14-外边距合并-上下外边距</title>
+
+    <style>
+        /* 
+            外边距合并
+            使用margin定义块元素的垂直外边距时，可能出现外边距的合并。
+            （1）相邻块元素垂直外边距的合并
+                当上下相邻的两个块元素相遇时，如果上面的元素右下边距margin-bottom
+                下面的元素有上外边距margin-top，则他们之间的垂直距离不是margin-top+margin-bottom之和
+                而是去两个值中最大的这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）、
+                解决方案是：
+                    尽量只给一个盒子添加margin-top或者margin-bottom值。
+         */
+        .top,
+        .bottom {
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+        }
+
+        .top {
+            margin-bottom: 100px;
+        }
+
+        .bottom {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top"></div>
+    <div class="bottom"></div>
+</body>
+
+</html>

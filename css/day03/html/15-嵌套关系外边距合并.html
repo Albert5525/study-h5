@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>15-嵌套关系外边距合并</title>
+
+
+    <style>
+        /* 
+            盒子模型的稳定性
+                学习完盒子模型，内边距和外边距，什么情况下用内边距，什么情况下用外边距？
+                    大部分情况下是可以混用的。就是说，你用内边距也可以，用外边距也可以，你绝得那个方便，就用那个。
+            我们根据稳定性来分，建议如下：
+            按照优先级使用 宽度（width） 其次 使用内边距（padding）  再次 外边距（margin）。
+                width>padding>margin
+            原因：
+                margin会有外边距合并 还有ie6下面margin加倍的bug，所以最后使用。
+                padding会影响盒子大小，需要进行加减计算（麻烦）其次使用
+                width没有问题我们经常使用宽度剩余法 高度剩余法来做。
+         */
+
+
+        /* 
+            嵌套块元素处置外边距的合并（塌陷）
+            对于两个嵌套合并的块元素，如果父元素没有上内边距鸡边框
+            合并后上边距为两者中的较大者
+
+            解决方案：
+                1.可以为父元素指定上边框
+                2.可以为父元素指定上内边距（padding）
+                3.可以为父元素添加overflow：hidden
+                ...还有其他方法，比如浮动，固定，绝对定位的盒子不会有问题，后面在总结。
+
+         */
+
+        .father {
+            /* 1.可以为父元素指定上边框 */
+            /* border-top: 1px solid transparent; */
+            /* 2.可以为父元素指定上内边距（padding） */
+            /* padding-top: 1px; */
+            /* 3.可以为父元素添加overflow：hidden */
+            overflow: hidden;
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+        }
+
+        .son {
+            margin-top: 50px;
+            height: 200px;
+            width: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

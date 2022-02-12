@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景演示</title>
+
+    <style>
+
+        /* 
+            背景
+            注意：
+                1.必须现制定background-image属性
+                2.postion 后面是x和y坐标。可以使用方位名词或者精确单位
+                3.如果指定两个值，两个值都是方位名词，则两个值前后顺序无关，比如left top和top left效果一直
+                4.如果至指定了一个方位名词，另一个值默认垂直居中
+                5.如果postion后面是精确坐标，那么第一个，肯定是x第二个一定是y，不能相互混乱
+                6.如果指定的两个值是精确单位和方位名词混合使用，则第一个值是x坐标，第二个值是y坐标
+         */
+        .bg {
+            height: 2500px;
+            width: 1600px;
+            background-image: url(https://t7.baidu.com/it/u=4036010509,3445021118&fm=193&f=GIF);
+            background-repeat: no-repeat;
+            border: red 1px solid;
+            /* background-position: center center;background-position: center center;表示背景的位置，x 和 y坐标 水平居中和垂直居中*/
+            /* background-position: left center; 这个表示垂直靠左居中*/
+
+
+            background-position: 10px 10px;/* 如果是精确的像素值，则第一个是x坐标，第二个是y坐标，不能相反 */
+
+
+
+
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+
+    </div>
+</body>
+
+</html>

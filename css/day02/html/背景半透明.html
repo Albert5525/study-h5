@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景半透明</title>
+    <style>
+        /* 
+            注意：背景半透明是指盒子背景半透明，盒子里面的内容不收影响。
+            因为是css3，所以低于ie9的版本是不支持的。
+         */
+        .alpha{
+            height: 100px;
+            width: 150px; 
+            background: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="alpha"></div>
+</body>
+</html>

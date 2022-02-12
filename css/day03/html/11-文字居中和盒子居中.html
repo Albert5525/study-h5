@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11-文字居中和盒子居中</title>
+
+
+    <style>
+        /* 
+            文字居中和盒子居中的区别
+            1.盒子内的文字水平居中是：text-align：center，而且还可以让行内元素和行内块居中对齐
+            2.块级盒子水平居中 左右margin改为auto
+         */
+
+        div {
+            height: 350px;
+            width: 400px;
+            background-color: pink;
+            margin: 0 auto;
+            /* 块级盒子水平居中 */
+            text-align: center;
+            /* 文字 行内元素 行内块元素水平居中 */
+            line-height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>11-文字居中和盒子居中</div>
+</body>
+
+</html>

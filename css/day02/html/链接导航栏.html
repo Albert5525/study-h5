@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链接导航栏</title>
+
+    <style>
+        .nav {
+            /* 这句话对行内元素，行内块元素都有效果的 */
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .nav a {
+            display: inline-block;
+            text-decoration: none;
+            height: 50px;
+            width: 125px;
+            color: red;
+            background: transparent url(../images/bg.png);
+        }
+
+        /* 鼠标经过nav里面的超链接 */
+
+        .nav a:hover {
+            color: yellow;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素选择器</title>
+
+    <style>
+        /*子元素选择器只有strong是div的儿子时生效*/
+        div > strong {
+            color: red;
+        }
+/*        !*后代选择器，只要strong是div的后代就会生效*!
+        div strong{
+            color: greenyellow;
+        }*/
+    </style>
+</head>
+<body>
+    <div>
+        <strong>儿子</strong>
+        <strong>儿子</strong>
+        <strong>儿子</strong>
+    </div>
+    <div>
+        <p>
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+            <strong>孙子</strong>
+        </p>
+    </div>
+
+</body>
+</html>
