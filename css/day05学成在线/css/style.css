@@ -1,0 +1,97 @@
+/* 清除元素默认的内外边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background-color: #f3f5f7;
+}
+/* 清除列表样式 */
+li{
+    list-style: none;
+}
+
+/* 版心水平居中 宽度1200px */
+.w{
+width: 1200px;
+margin: auto;
+}
+
+/* header头部start */
+.header{
+    height: 41px;
+    margin: 30px auto;
+    /* background-color: pink; */
+}
+.header div{
+    float: left;
+    /* height: 40px; */
+}
+.nav{
+    margin-left: 58px;
+}
+.nav ul li{
+    float: left;
+}
+.nav ul li a{
+    display: block;
+    height: 37px;
+    padding: 0 10px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.nav ul li a:hover{
+    border-bottom: 2px solid #00a4ff;
+}
+/* header头部end */
+
+
+
+/* 搜索框 start*/
+.search input{
+    display: block;
+    float: left;
+    height: 39px;
+    width: 360px;
+    border: 1px solid #00a4ff;
+    border-right: none;
+    font-size: 18px;
+
+    margin-left: 86px;
+}
+.search button{
+    display: block;
+    height: 41px;
+    width: 50px;
+    background: url(../images/fa-search.png) no-repeat center center;
+    background-color: #00a4ff;
+    float: left;
+    border: none;
+}
+/* search end */
+
+/* user start */
+    .user{
+        width: 152px;
+    }
+    .user .userimg{
+        float: left;
+        height: 30px;
+        width: 30px;
+        background-image: url(../images/userimg.png);
+        border-radius: 50%;
+
+        margin: 5px 4px 6px 20px;
+    }
+    .user p{
+        display: block;
+        font-size: 14px;
+        margin-left: 10px;
+        line-height: 40px;
+    }
+/* user end */
