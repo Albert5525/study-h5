@@ -8,7 +8,7 @@ a{
 }
 body{
     background-color: #f3f5f7;
-    height: 3000px;
+    /* height: 3000px; */
 }
 
 /* 清除浮动代码start */
@@ -37,8 +37,8 @@ button{
 
 /* 版心水平居中 宽度1200px */
 .w{
-width: 1200px;
-margin: auto;
+    width: 1200px;
+    margin: auto;
 }
 
 /* header头部start */
