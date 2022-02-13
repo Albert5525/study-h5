@@ -8,10 +8,31 @@ a{
 }
 body{
     background-color: #f3f5f7;
+    height: 3000px;
 }
+
+/* 清除浮动代码start */
+.clearfix:before,
+.clearfix:after{
+    content:"";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+/* 清除浮动代码end */
+
+
 /* 清除列表样式 */
 li{
     list-style: none;
+}
+/* 去掉button默认自带的边框*/
+button{
+    border: none;
 }
 
 /* 版心水平居中 宽度1200px */
@@ -28,7 +49,6 @@ margin: auto;
 }
 .header div{
     float: left;
-    /* height: 40px; */
 }
 .nav{
     margin-left: 58px;
@@ -54,24 +74,24 @@ margin: auto;
 
 /* 搜索框 start*/
 .search input{
-    display: block;
+    /* display: block; */
     float: left;
     height: 39px;
-    width: 360px;
+    width: 340px;
     border: 1px solid #00a4ff;
     border-right: none;
     font-size: 18px;
-
+    color: #bfbfbf;
+    padding-left: 20px;
     margin-left: 86px;
 }
 .search button{
-    display: block;
+    /* display: block; */
     height: 41px;
     width: 50px;
     background: url(../images/fa-search.png) no-repeat center center;
     background-color: #00a4ff;
     float: left;
-    border: none;
 }
 /* search end */
 
@@ -95,3 +115,251 @@ margin: auto;
         line-height: 40px;
     }
 /* user end */
+
+
+
+/* banner start */
+    .banner{
+        height: 420px;
+        background: #1c036c url(../images/banner2.jpg) no-repeat center center;
+    }
+    .banner .content{
+        width: 1200px;
+        height: 420px;
+        /* background-color: #fff; */
+        margin: 0 auto;
+    }
+    /* 左侧导航栏 */
+    .banner .content .side_nav ul{
+        float: left;
+        height: 396px;
+        width: 190px;
+       padding: 12px 0;
+       background-color:rgba(0, 0, 0, .5);
+    }
+    .content ul li a{
+        display: block;
+        height: 44px;
+        margin:0 20px;
+        line-height: 44px;
+        color: #ffffff;
+    }
+    .content ul li a span{
+        float: right;
+    }
+    .content ul li a:hover{
+        color: #00b4ff;
+    }
+    /* 右侧课程表 */
+    .course-list{
+        float: right;
+        width: 228px;
+        height: 300px;
+        margin-top: 50px;
+        background-color:#ffffff;
+    }
+    .course-list .course-hd{
+        width: 228px;
+        height: 48px;
+        line-height: 48px;
+
+        background-color: #9bceea;
+        color: #ffffff;
+        text-align: center;
+        font-size: 18px;
+        /* 文字加粗 */
+        font-weight: bold;
+    }
+    .course-list .course-bd{
+        height: 228px;
+        background-color: #ffffff;
+        padding: 12px 15px;
+    }
+    .course-bd ul{
+        width: 198px;
+        padding-top: 10px;
+    }
+    .course-bd ul li{
+        border-bottom: 1px solid #eaeaea;
+        height: 50px;
+        margin-bottom: 8px;
+    }
+    .course-bd ul li h4{
+        font-size: 14px;
+        color: #4e4e4e;
+    }
+    .course-bd ul li p{
+        font-size: 12px;
+        color: #a5a5a5;
+    }
+    .course-bd a{
+        display: block;
+        width: 198px;
+        height: 38px;
+        border: 1px solid #22b0ff;
+        color: #22b0ff;
+        text-align: center;
+        line-height: 38px;
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+    .course-bd a:hover{
+        background-color: #fff;
+        background-color: #22b0ff;
+        color: #fff;
+    }
+/* banner end */
+
+/* goods start */
+.goods{
+    margin-top: 8px;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 2px 4px 4px #dcdee0;
+    text-align: center;
+}
+
+.goods .good_course,.goods .good_course li{
+    float: left;
+}
+.goods .good_course li a{
+    border-left: 1px solid #bfbfbf;
+    color: #050505;
+    padding: 0 34px;
+}
+.goods .good_course li a:hover{
+    color: #00a4ff;
+}
+#good_first{
+    border: none;
+}
+
+.goods .update{
+    float: right;
+}
+.goods .update a{
+    display: block;
+    color: #00a4ff;
+    font-size: 14px;
+    padding: 0 26px;
+}
+/* goods end */
+
+
+/* box start */
+.box{
+    /* text-align: center; */
+    margin-top: 10px;
+}
+.box .box_hd{
+    height: 60px;
+    line-height: 60px;
+    /* background-color: pink; */
+}
+.box_hd h3{
+    /* display: inline-block; */
+    float: left;
+
+    /* 让粗体不加粗 */
+    font-weight: 400;
+    font-size: 20px;
+    color: #838485;
+}
+.box_hd a{
+    float: right;
+    margin-right: 30px;
+    color: #a5a5a5;
+    font-size: 12px;
+}
+
+
+.box_bd {
+    width: 1215px;
+}
+.box_bd li a{
+    display: block;
+    width: 228px;
+    height: 270px;
+    margin: 0 15px 15px 0;
+}
+.box_bd li a:hover{
+    box-shadow: 0px 4px 4px #c1c3c4;
+}
+.box_bd li{
+    float: left;
+    /* background-color: pink; */
+}
+.box_bd li h4{
+    margin: 25px 20px 0 20px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.box_bd li p{
+    font-size: 12px;
+    margin: 0 20px;
+    margin-top: 20px;
+}
+.box_bd p span{
+    color: #ff7c2d;
+}
+/* box end */
+
+
+/* footer starter */
+.footer{
+    background-color: #fff;
+    height: 385px;
+    padding-top: 30px
+}
+.footer .copyright{
+    float: left;
+}
+.footer .copyright p{
+    margin-top: 25px;
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 18px;
+}
+.footer .copyright a{
+    display: block;
+    width: 118px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+    
+
+    border: 1px solid #00a4ff;
+}
+.footer .copyright a:hover{
+    color: #fff;
+    background-color: #00a4ff;
+    box-shadow: 5px 5px 4px rgba(255, 165, 100, .5);
+}
+
+.footer .links{
+    float: right;
+    padding-right: 30px;
+}
+.footer .links div{
+    float: left;
+    margin-left: 120px
+}
+.footer h3{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.footer a{
+    display: block;
+    height: 22px;
+    line-height: 22px;
+    color: #333333;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+/* footer end */
