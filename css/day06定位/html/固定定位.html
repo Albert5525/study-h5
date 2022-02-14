@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定定位</title>
+    <style>
+
+        /* 
+            固定定位：
+                固定定位是绝对定位的一种西少年特殊形式：固定定位是以浏览器为准的定位而不是以父级元素为准。
+                    1.完全脱标，完全不占位置。
+                    2.之人浏览器的可视窗口，跟父元素没有任何关系。不随滚动条滚动。
+        */
+        body{
+            height: 5000px;
+        }
+        .box {
+            width: 300px;
+            height: 100px;
+            margin: 100px;
+            background-color: purple;
+        }
+        img{
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../images/sun.jpg" alt="" width="150px">
+    </div>
+</body>
+
+</html>

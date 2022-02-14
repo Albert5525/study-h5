@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相对定位特性</title>
+    <style>
+        /* 
+            相对定位：
+                相对定位是元素相对于它自己原来在标准流中的位置来说的（自恋型）
+            相对定位的特点：
+                1.相对于自己原来在标准流中位置来移动的。
+                2.原来在标准流的区域继续占有，后面的盒子仍然以标准流的方式对待它。
+        */
+
+        div {
+            width: 200px;
+            height: 200px;
+
+            background-color: pink;
+            /* 定位=定位模式+边偏移 */
+/*             position: relative;
+            top: 100px;
+            left: 100px; */ 
+        }
+
+        .two {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            position: relative;
+            top: -100px;
+            left: -100px;
+        }
+
+        .third {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="two"></div>
+    <div class="thrid"></div>
+</body>
+
+</html>

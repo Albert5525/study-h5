@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .taobao {
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .arrow-l,
+        .arrow-r {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            top: 50%;
+            background: rgba(0, 0, 0, .2);
+            color: #fff;
+
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: -10px;
+        }
+
+        .arrow-l {
+            left: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .arrow-r {
+            right: 0px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .arrow-l:hover,
+        .arrow-r:hover {
+            background: rgba(0, 0, 0, .4);
+        }
+
+        .circle {
+            position: absolute;
+            width: 71px;
+            height: 14px;
+            left: 50%;
+            margin-left: -35px;
+            bottom: 15px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+        .circle li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+        .circle .current{
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taobao">
+        <!-- 左按钮 -->
+        <a href="" class="arrow-l">&lt;</a>
+
+        <!-- taobao img -->
+        <img src="../images/taobao.jpg" alt="">
+
+        <!-- 右按钮 -->
+        <a href="" class="arrow-r">&gt;</a>
+
+        <!-- 小圆点 -->
+        <ul class="circle">
+            <li></li>
+            <li></li>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

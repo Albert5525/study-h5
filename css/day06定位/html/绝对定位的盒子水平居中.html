@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位的盒子水平居中</title>
+    <style>
+        .box {
+            height: 500px;
+            width: 500px;
+            background-color: pink;
+            margin: 0 auto;
+            position: relative;
+        }
+        .box img{
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            margin-left: -37px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../images/模拟.png" alt="">
+    </div>
+</body>
+
+</html>

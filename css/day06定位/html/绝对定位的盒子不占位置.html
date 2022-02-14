@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位的盒子不占位置</title>
+    <style>
+        /* 
+            绝对定位的特点：
+                1.绝对是以带有定位的父级元素来移动位置（拼爹型）如果父级都没有定位，则以浏览器文档为准移动位置。
+                2.不保留原来的位置，完全是脱标的。
+            因为绝对定位的盒子是拼爹的，所以要和父级搭配一起来使用。
+            定位口诀：子绝父相
+            子绝父相：子级是绝对定位，那么父级要用相对定位。
+            结论：父级要占有位置，子级要任意摆放，这就是子绝父相的由来。
+        */
+        .damao{
+            height: 400px;
+            width: 400px;
+            background-color: pink;
+        }
+        .ermao{
+            height: 400px;
+            width: 400px;
+            background-color: skyblue;
+            position: absolute;
+        }
+        .sanmao{
+            height: 400px;
+            width: 400px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="damao"></div>
+    <div class="ermao"></div>
+    <div class="sanmao"></div>
+</body>
+</html>

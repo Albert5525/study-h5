@@ -276,6 +276,15 @@ button{
 .box_bd {
     width: 1215px;
 }
+.box_bd li{
+    position: relative;
+}
+.box_bd li>img{
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    margin-right: 5px;
+}
 .box_bd li a{
     display: block;
     width: 228px;
