@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>溢出文字省略号显示</title>
+    <style>
+        /*
+            溢出的文字省略号显示
+                white-space设置或检索对象内文本显示方式，通常我们使用于强制一行显示内容。
+                white-space:normal  默认处理方式(当文字显示不开的时候自动换行)
+                white-space:nowrap  强制同一行内显示所有文本，知道文本结束或者早遇到br标签对象才换行
+            text-overflow文字溢出
+                设置或检索是否使用一个省略号标记(...)标示对象内文本的溢出
+                    text-overflow:clip      不显示省略标记(...),而是简单的裁切
+                    text-overflow:ellipsis  当对象内文本一出事显示省略号标记(...)
+            注意：
+                1.一定首先强制一行显示，
+                2.然后设置超出的部分隐藏overflow:hidden,
+                3.然后在设置文字overflow=ellipsis属性。三者搭配使用
+         */
+
+        .box {
+            width: 100px;
+            height: 20px;
+            margin: 0 auto;
+            border: 1px solid rebeccapurple;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">height hahhaha</div>
+</body>
+
+</html>

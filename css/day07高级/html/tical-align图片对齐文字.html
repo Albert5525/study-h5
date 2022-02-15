@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vertical-align图片对齐文字</title>
+    <style>
+        .one {
+            /* 默认的是基线对齐 */
+            vertical-align: baseline;
+        }
+
+        .two {
+            /* 让图片的中线与文字的中线对齐 */
+            vertical-align: middle;
+        }
+        .three{
+            /* 图片顶部与文字顶部对齐 */
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="../images/2.jpg" alt="" class="one">你愁啥
+    </div>
+    <div>
+        <img src="../images/2.jpg" alt="" class="two">你愁啥
+    </div>
+    <div>
+        <img src="../images/2.jpg" alt="" class="three">你愁啥
+    </div>
+</body>
+
+</html>

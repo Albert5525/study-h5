@@ -99,20 +99,15 @@ button{
     .user{
         width: 152px;
     }
-    .user .userimg{
-        float: left;
-        height: 30px;
+    .user .userimg img{
         width: 30px;
-        background-image: url(../images/userimg.png);
-        border-radius: 50%;
-
         margin: 5px 4px 6px 20px;
+        border-radius: 50%;
+        vertical-align: middle;
     }
     .user p{
-        display: block;
+        display: inline-block;
         font-size: 14px;
-        margin-left: 10px;
-        line-height: 40px;
     }
 /* user end */
 

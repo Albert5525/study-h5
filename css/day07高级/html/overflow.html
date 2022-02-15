@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>overflow</title>
+    <style>
+        /* 
+            overflow的属性值
+            属性值              描述                        
+            visible             不剪切内容也不添加滚动条                    默认
+            hidden              不显示超过对象尺寸的内容，超出的部分隐藏掉    常用
+            scroll              不管超出内容否，总是显示滚动条              太丑不用
+            auto                超出自动显示滚动条，不超出不显示滚动条       太丑不用
+         */
+
+         /* 
+         
+            属性                区别                    用途
+            display             隐藏对象，不保留位置     配合js做特效，比如下拉菜单，原先没有，鼠标经过，显示下拉菜单，应用纪委广泛
+            visibility          隐藏对象，保留位置      使用较少
+            overflow            只是隐藏超出大小的部分   1.可以清除浮动。2.保证盒子里面的内容不会超出该盒子的范围。
+          */
+
+        .father ,.monther{
+            height: 500px;
+            width: 500px;
+        }
+        .father{
+            border: 1px solid pink;
+            overflow: hidden;
+        }
+        .monther{
+            border: 1px solid skyblue;
+        }
+
+        .damao,
+        .ermao {
+            height: 250px;
+            width: 250px;
+        }
+        .damao{
+            border: 1px solid blue;
+        }
+        .ermao{
+            border: 1px solid rebeccapurple;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="father">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="monther">
+        monther
+    </div>
+</body>
+
+</html>

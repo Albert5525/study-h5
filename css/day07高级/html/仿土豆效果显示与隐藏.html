@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仿照土豆显示与隐藏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .w {
+            margin: 100px auto;
+        }
+
+        .box {
+            width: 222px;
+            position: relative;
+        }
+
+        .mask {
+            display: none;
+            position: absolute;
+            width: 222px;
+            height: 220px;
+            background: rgba(0, 0, 0, .3) url(../images/arr.png) no-repeat center center;
+            top: 0;
+            left: 0;
+        }
+
+        /* 鼠标经过后，a里面的盒子显示 */
+        .box a:hover .mask{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box w">
+        <a href="#">
+            <div class="mask"></div>
+            <img src="../images/3.jpg" alt="">
+        </a>
+    </div>
+</body>
+
+</html>
