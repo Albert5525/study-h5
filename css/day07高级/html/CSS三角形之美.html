@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS三角形之美</title>
+    <style>
+        /* 
+            CSS边框可以模拟三角效果 
+            宽度高度为0
+            4个边框都要写，只保留需要的边框颜色，其余的不能省略，都改为transparent透明就好
+            为了照顾兼容性，加上font-size：0，line-height：0；
+        */
+
+        div {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-left: 10px solid blue;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

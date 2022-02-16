@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>margin负值之美突出显示某个盒子</title>
+    <style>
+        body>div {
+            float: left;
+            width: 200px;
+            height: 300px;
+            border: 1px solid rgb(30, 30, 30);
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+        /* 伪类选择器不光a标签有，div  p等标签的都有 */
+        body>div:hover{
+            position: relative;
+            z-index: 999;
+            border: 1px solid #ce9173;
+        }
+        body>div:hover .haha{
+            display: block;
+        }
+
+
+
+        .haha{
+            display: none;
+            width: 200px;
+            height: 50px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+    <div>
+        <div class="haha">哈哈，我出来了</div>
+    </div>
+</body>
+
+</html>
