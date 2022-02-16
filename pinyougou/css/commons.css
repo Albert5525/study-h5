@@ -1,0 +1,11 @@
+/* 公共样式 */
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
