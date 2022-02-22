@@ -9,3 +9,52 @@
     width: 1200px;
     margin: 0 auto;
 }
+
+.style-red{
+    color: #c81623;
+}
+
+/* 字体样式 */
+@font-face {
+    /* 注意字体名称，要使用的地方要和这里写的一致 */
+    font-family: 'icomoon';
+    /* 一定注意路径 */
+    src: url('../fonts/icomoon.eot?7kkyc2');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.icomon{
+    font-family: 'icomoon';
+    font-size: 16px;
+    line-height: 26px;
+}
+
+/* 顶部导航栏start */
+.header li{
+    float: left;
+}
+.header { 
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+
+.header .leftcut li,.rightcut li{
+    text-align: center;
+    color: #666666;
+    
+}
+
+.spacer{
+    margin: 9px 14px 0;
+    height: 12px;
+    width: 1px;
+    background-color: #666666;
+}
+
+/* 顶部导航栏end */
