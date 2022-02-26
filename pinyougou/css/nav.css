@@ -1,24 +1,76 @@
+/* 全部商品 */
 .nav{
+    border-bottom: 2px solid #b1191a;
+}
+.nav>div{
+    position: relative;
     height: 45px;
-    height: 45px;
-    line-height: 45px;
+    
     font-size: 16px;
-    border-bottom:  2px solid #b1191a;
-}
-
-.nav .dropdown{
-    float: left;
-    width: 209px;
-
-    background-color: #b1191a;
-    color: #fff;
     text-align: center;
+
+    /* background-color: pink; */
 }
-.nav .navitems{
-    float: left;
+.nav .dropdown{
+    position: absolute;
+    background-color: #b1191a;
+    color: #ffffff;
+}
+
+.dropdown .dt{
+    line-height: 45px;
+    width: 209px;
+}
+.dropdown .dd{
+    margin-top: 2px;
+}
+
+.dropdown .dd li{
+    width: 209px;
+    height: 31px;
+}
+
+.dropdown .dd a{
+    display: inline-block;
+    position: relative;
+    width: 208px;
+    height: 31px;
+    line-height: 31px;
+    text-align: left;
+    text-indent: 12px;
+    font-size: 14px;
+    color: #ffffff;
+}
+.dropdown .dd a:hover{
+    background-color: #fff;
+    color: #b1191a;
+}
+.dropdown .dd em{
+    /* display: inline-block; */
+    /* margin-left: 78px; */
+    position: absolute;
+    top: 0px;
+    right: 11px;
+    color: #fff;
+}
+
+
+
+
+
+
+.navitems{
+    position: absolute;
+    top: 0px;
+    left: 209px;
     margin-left: 41px;
+    /* background-color: green; */
 }
-.nav li{
+.navitems li{
     float: left;
-    margin-right: 48px
+    line-height: 45px;
+    margin-right: 48px;
 }
+
+
+
