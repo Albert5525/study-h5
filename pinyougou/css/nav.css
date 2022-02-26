@@ -25,16 +25,13 @@
     margin-top: 2px;
 }
 
-.dropdown .dd li{
-    width: 209px;
-    height: 31px;
-}
 
 .dropdown .dd a{
     display: inline-block;
     position: relative;
     width: 208px;
     height: 31px;
+    margin-left: 1px;
     line-height: 31px;
     text-align: left;
     text-indent: 12px;
