@@ -1,0 +1,28 @@
+.recommend{
+    height: 163px;
+    margin-top: 11px;
+    /* background-color: pink; */
+}
+
+.recom-hd{
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-image: url(../img/recm_03.jpg);
+}
+
+.recom-bd{
+    height: 100%;
+    background-color: #ebebeb;
+}
+.recom-bd li{
+    float: left;
+    margin-top: 10px;
+    /* background-color: pink; */
+    width: 249px;
+    height: 144px;
+    border-right: 1px solid #dddddd;
+}
+.recom-last{
+    border: none;
+}
