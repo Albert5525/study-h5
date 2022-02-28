@@ -60,6 +60,102 @@
 /* 顶部导航栏end */
 
 
+/* ======================= */
+.searchbar{
+    position: relative;
+    height: 105px;
+    /* background-color: pink; */
+}
+.logo{
+    position: absolute;
+    width: 171px;
+    height: 61px;
+    left: 3px;
+    top: 50%;
+    margin-top: -30px;
+}
+
+.logo a{
+    display: inline-block;
+    width: 171px;
+    height: 61px;
+    background:transparent url(../img/logo.png) no-repeat center center;
+
+    /* 首行缩进 */
+    text-indent: -999px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+.search{
+    position: absolute;
+    top: 25px;
+    left: 347px;
+}
+.search input,.search button{
+    float: left;
+}
+.search input{
+    width: 454px;
+    height: 32px;
+    text-indent: 10px;
+    font-size: 14px;
+    border: 2px solid #b1191a;
+    border-right: none;
+}
+.search button{
+    width: 62px;
+    height: 36px;
+    font-size: 16px;
+    border: none;
+    color: #f7f7f7;
+    background-color:  #b1191a;
+}
+
+.searchbar ul{
+    position: absolute;
+    top: 69px;
+    left: 359px;
+}
+
+.searchbar li{
+    float: left;
+    margin-right: 25px;
+}
+
+.car{
+    font-family: 'icomoon';
+    color: #db5c5c;
+}
+.arrow{
+    font-family: 'icomoon';
+}
+.searchbar .shopcar{
+    position: absolute;
+    width: 138px;
+    height: 34px;
+    top: 25px;
+    right: 64px;
+    text-align: center;
+    line-height: 34px;
+    background-color: #f7f7f7;    
+    border: 1px solid #dfdfdf;
+}
+
+
+.count{
+    position: absolute;
+    bottom: 25px;
+    left: 104px;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    color: #fff;
+    /* border-radius: 左上角 右上角 右下角 左下角 */
+    border-radius: 7px 7px 7px 0;
+    background-color: #e60012;
+}
+/* ======================= */
+
 /* 全部商品 */
 .nav{
     border-bottom: 2px solid #b1191a;
@@ -86,7 +182,7 @@
     width: 209px;
 }
 .dropdown .dd{
-    display: none;
+    /* display: none; */
     background-color: #c81623;
     margin-top: 2px;
 }
