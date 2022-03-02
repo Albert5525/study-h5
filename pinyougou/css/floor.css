@@ -1,0 +1,31 @@
+.box-hd{
+    height: 30px;
+    padding-top: 26px;
+    border-bottom: 2px solid #c81623;
+    /* background-color: pink; */
+}
+
+.box-hd h3{
+    float: left;
+    text-align: left;
+    color: #c81623;
+    font-size: 18px;
+}
+.box-hd .tab-list{
+    float: right;
+    padding: 9px 0;
+    line-height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.box-hd li{
+    float: left;
+    border-right: 1px solid #999999;
+}
+.box-hd li.last{
+    border: none;
+}
+.box-hd li a{
+    display: inline-block;
+    margin: 0 15px;
+}

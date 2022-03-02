@@ -9,7 +9,9 @@
     width: 1200px;
     margin: 0 auto;
 }
-
+.last{
+    border: none;
+}
 .style-red{
     color: #c81623;
 }
