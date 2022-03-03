@@ -1,0 +1,27 @@
+.sk{
+    position: absolute;
+    width: 70px;
+    height: 32px;
+    top: 40px;
+    left: 185px;
+    border-left: 1px solid #c81523;
+}
+.sk img{
+    margin-left: 14px;
+    margin-top: 3px;
+}
+.sk-items li a{
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-family: 'icomoon';
+    margin: 0 23px;
+    line-height: 45px;
+}
+.sk-items li .sk-items-three{
+    margin: 0 28px;
+    font-size: 16px;
+    line-height: 45px;
+    color: #000000;
+    font-weight: 700;
+}
