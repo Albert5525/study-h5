@@ -29,3 +29,32 @@
     display: inline-block;
     margin: 0 15px;
 }
+
+
+.box-bd{
+    height: 360px;
+    /* background-color: pink; */
+}
+
+.w209{
+    width: 209px;
+}
+.w329{
+    width: 329px;
+}
+.w219{
+    width: 219px;
+    border-right: 1px solid #ccc;
+}
+.w220{
+    width: 220px;
+    border-right: 1px solid #ccc;
+}
+.tab-content li{
+    float: left;
+    height: 360px;
+}
+
+.tab-content-bottom{
+    border-bottom: 1px solid #ccc;
+}
