@@ -1,0 +1,23 @@
+.fixedtool{
+    position: fixed;
+    left: 50%;
+    margin-left: -666px;
+    top: 50%;
+    width: 66px;
+    text-align: center;
+}
+.fixedtool li:hover{
+    background-color: red;
+}
+.fixedtool a:hover{
+    color: #ffffff;
+}
+.fixedtool a{
+    display: block;
+    height: 30px;
+    width: 56px;
+    margin: 0 5px;
+    font-size: 12px;
+    line-height: 30px;
+    border-bottom: 1px solid #ccc;
+}
