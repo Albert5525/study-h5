@@ -25,3 +25,124 @@
     color: #000000;
     font-weight: 700;
 }
+
+
+/* 内容区域start */
+.sk-container-hd{
+    height: 120px;
+    /* background-color: pink; */
+}
+
+
+.sk-container-bd{
+    margin-top: 25px;
+}
+.sk-goods{
+    position: relative;
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin: 10px 7px 0 0;;
+    border: 1px solid #ccc;
+}
+.sk-goods:hover{
+    border: 1px solid #c81523;
+}
+
+.sk-goods-title{
+    font-size: 14px;
+    color: #747474;
+    font-weight: normal;
+    margin: 10px 10px;
+}
+.sk-goods-price{
+    margin: 0 10px;
+}
+.sk-goods-price em{
+    font-size: 22px;
+    font-weight: bolder;
+    color: #c81523;
+}
+.sk-goods-price del{
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+
+
+
+.sk-goods-progress{
+    margin: 0 10px;
+}
+.bar{
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    width: 132px;
+    margin: 0 5px;
+    border: 1px solid #ed282e;
+    border-radius: 10px 10px;
+}
+.bar-in{
+    width: 87%;
+    height: 100%;
+    background-color:  #ed282e;
+}
+.sk-goods-progress i,.sk-goods-progress em{
+    color: #c81523;
+}
+
+.sk-goods-buy{
+    position: absolute;
+    height: 50px;
+    width: 290px;
+    bottom: 0px;
+    line-height: 50px;
+    font-size: 20px;
+    background-color:#b1191a;
+    color: #fff;
+    text-align: center;
+
+}
+/* 内容区域end */
+
+
+/* 分页start */
+.page{
+    margin: 10px auto;
+    text-align: center;
+}
+.page_num a,.page .page_input{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    line-height: 36px;
+}
+.page_num .page_prev,.page_num .page_next{
+    width: 83px;
+}
+.page_num .current_num,.page_num .page_doted{
+    border: 1px solid transparent;
+    background-color: #fff;
+}
+.page_go{
+    margin-left: 5px;
+}
+.page_go button{
+    width: 54px;
+    height: 36px;
+    border: 1px solid #ccc;
+}
+.page .page_input{
+    width: 50px;
+    text-align: center;
+    transition: all .5s;
+
+}
+.page_input:focus{
+    width: 60px;
+    border: 1px solid blue;
+}
+/* 分页end */
