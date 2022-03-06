@@ -1,0 +1,119 @@
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header{
+    border-bottom: 2px solid #b1191a;
+}
+
+.container{
+    width: 1198px;
+    height: 540px;
+    margin-top: 20px;
+    border: 1px solid #dfdfdf;
+}
+.container_hd{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ececec;
+    border-bottom: 1px solid #dddddd;
+}
+.container_hd p{
+    position: absolute;
+    height: 40px;
+    font-size: 18px;
+    top: 0px;
+}
+.container_hd .left{
+    margin-left: 10px;
+    left: 0px;
+}
+.container_hd .right{
+    margin-right: 10px;
+    right: 0px;
+}
+.container_hd .right a{
+    color: #b1191a;
+}
+.regist_form{
+    width: 600px;;
+    height: 400px;
+    margin: 40px auto;
+    /* background-color: pink; */
+}
+.regist_form li{
+    margin-bottom: 20px;
+}
+.regist_form label{
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+}
+.regist_form input{
+    width: 238px;
+    height: 34px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.error{
+    color: #df3033;
+}
+.error_icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../upload/error-icon_03.png);
+    vertical-align: middle;
+}
+
+.safe{
+    padding-left: 187px;
+}
+.safe em{
+    display: inline-block;
+    width: 34px;
+    height: 13px;
+    text-align: center;
+    line-height: 13px;
+    margin: 0px 10px;
+    color: #fff;
+}
+.ruo{
+    background-color: #de1111;
+}
+.zhong{
+    background-color: #40b83f;
+}
+.qiang{
+    background-color: #f79100;
+}
+
+.regist_form input.xieyi{
+    width: 14px;
+    height: 13px;
+    margin-left: 112px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    color: blue;
+    background-color: #fff;
+    vertical-align: middle;
+}
+.agreen a{
+    color: #38a8e8;
+}
+.regist_form .regist input{
+    display: inline-block;
+    width: 200px;
+    height: 34px;
+    margin-left: 120px;
+    font-size: 14px;
+    background-color: #c81623;
+    color: #fff;
+}
