@@ -27,14 +27,12 @@
     position: relative;
     margin-top: 64px;
     height: 58px;
-    background-color: pink;
 }
 .list_item{
     width: 320px;
     height: 100%;
     margin: 0 auto;
     text-align: center;
-    background-color: blue;
 }
 .list_item li{
     float: left;
@@ -42,7 +40,6 @@
     height: 56px;
     margin: 0 3px;
     border: 1px solid transparent;
-    background-color: green;
 }
 .list_item .list_item_current{
     border: 1px solid #c81623;
@@ -55,19 +52,170 @@
     width: 22px;
     height: 58px;
     border: none;
-    background-color: blue;
     top: 0px;
 }
 .preview_list_pren{
     left: 0px;
+    background-image: url(../upload/详情小图-pren_03.jpg);
 }
 .preview_list_next{
     right: 0px;
+    background-image: url(../upload/详情小图-next_03.jpg);
 }
+
+
+
+
 .prod_de{
     float: left;
     width: 721px;
     height: 569px;
     margin-left: 79px;
-    background-color: #1e1e1e;
+    /* background-color: pink; */
 }
+.sku_name{
+    height: 30px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+.news{
+    height: 32px;
+    color: #e12228;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* summary start */
+.summary dl{
+    overflow: hidden;
+}
+.summary dd,.summary dt{
+    float: left;
+    /* height: 65px; */
+}
+.summary dt{
+    width: 60px;
+    line-height: 36px;
+    padding-left: 10px;
+}
+.summary_price,.summary_promotion{
+    position: relative;
+    padding: 10px 0;
+    background-color: #fee9eb;
+}
+
+.remark{
+    position: absolute;
+    top: 20px;
+    right: 11px;
+}
+.remark_total{
+    color: #1474af;
+}
+
+
+.price{
+    font-size: 24px;
+    color: #e3373c;
+}
+.summary_promotion dd{
+    width: 450px;
+    line-height: 36px; 
+}
+.summary_promotion{
+    padding: 0;
+}
+.summary_promotion em{
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    background-color: #c81623;
+    line-height: 22px;
+    text-align: center;
+}
+.summary_support dd{
+    line-height: 36px;
+}
+
+
+.choose_color a,
+.choose_version a,
+.choose_capture a,
+.choose_buy_style a,
+.choose_meal a{
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 41px;
+    color: #333333;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+}
+.summary a.current{
+    border: 1px solid #c81623;
+}
+
+
+
+.choose_version a,
+.choose_capture a,
+.choose_buy_style a,
+.choose_meal a{
+    padding: 0 13px;
+    height: 32px;
+    line-height: 32px;
+}
+.choose_version,
+.choose_capture,
+.choose_buy_style,
+.choose_meal{
+    overflow: hidden;
+    margin-top: 7px;;
+}
+
+.choose_meal{
+    margin-top: 22px;
+}
+.add_cart{
+    width: 142px;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #c81623;
+    border: none;
+}
+.good_num{
+
+    position: relative;
+    width: 49px;
+    height: 44px;
+    border: 1px solid #cccccc;
+}
+.good_num input{
+    display: inline-block;
+    width: 33px;
+    height: 100%;
+    text-align: center;
+    border: none;
+    /* border-right: none; */
+}
+.good_num button{
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    right: 0px;
+    border: none;
+    border-left: 1px solid #ccc;
+}
+.good_num button.add{
+    top: 0px;
+    border-bottom: 1px solid #ccc;
+}
+.good_num button.sub{
+    bottom: 0px;
+}
+/* summary end */
