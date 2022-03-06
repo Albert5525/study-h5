@@ -219,3 +219,61 @@
     bottom: 0px;
 }
 /* summary end */
+
+.aside{
+    float: left;
+    width: 208px;
+    height: 1000px;
+    border: 1px solid #dddddd;
+}
+.detail{
+    float: left;
+    width: 977px;
+    height: 1000px;
+    margin-left: 11px;
+    border: 1px solid #dddddd;
+}
+
+
+.tab_list{
+    line-height: 33px;
+    font-size: 12px;
+    text-align: center;
+}
+.tab_list li{
+    float: left;
+    width: 103px;
+    height: 33px;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f1f1f1;
+}
+.tab_list .second{
+    width: 104px;
+    border-left: 1px solid #dddddd;
+}
+.tab_list li.current{
+    border-bottom: 1px solid transparent;
+    background-color: #fff;
+    color: #c81623;
+}
+
+.tab_con{
+    padding: 0 10px;
+}
+.tab_con li{
+    border-bottom: 1px solid #ccc;
+}
+.tab_con li p{
+    width: 170px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.tab_con li button{
+    width: 88px;
+    height: 26px;
+    margin: 4px 59px 20px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+}
