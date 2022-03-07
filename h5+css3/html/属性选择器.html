@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        /* 
+            属性选择器：
+            选择符              简介
+            E[attr]             选择具有attr属性的E元素
+            E[attr="val"]       选择具有attr属性接属性值等于val的E元素
+            E[attr^="val"]      匹配具有attr属性，切值以val开头的E元素
+            E[attr$="val"]      匹配具有attr属性切值以val结尾的E元素
+            E[attr="val"]       匹配具有attr属性切值中含有val的E元素
+         */
+        
+        input[type="search"] {
+            color: pink;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        /* 匹配标签为div切这个div的类名以icon开头的元素 */
+        
+        div[class^="icon"] {
+            color: aqua;
+            background-color: pink;
+        }
+        
+        div[class$="4"] {
+            color: yellowgreen;
+            background-color: blue;
+        }
+        
+        div[class="parent"] {
+            width: 1000px;
+        }
+        
+        div[class="parent"] div {
+            float: left;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="text">
+    <input type="text" value="text">
+    <input type="text" value="text">
+    <input type="search" value="search">
+    <input type="search" value="search">
+    <input type="search" value="search">
+    <div class="parent">
+        <div class="icon1">图标1</div>
+        <div class="icon2">图标2</div>
+        <div class="icon3">图标3</div>
+        <div class="icon4">图标4</div>
+        <div class="iccon4">图标5</div>
+    </div>
+</body>
+
+</html>

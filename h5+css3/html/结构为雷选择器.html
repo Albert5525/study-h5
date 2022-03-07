@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>结构伪类选择器</title>
+    <style>
+        /* 
+            结构伪类选择器
+         */
+        /* ul 下面的 第一个li */
+        
+        .mather ul li:first-child {
+            background-color: pink;
+        }
+        /* ul 下面的最后一个li */
+        
+        .mather ul li:last-child {
+            background-color: deeppink;
+        }
+        /* ul 下面的第n个li */
+        
+        .mather ul li:nth-child(8) {
+            background-color: lightcoral;
+        }
+        /* n是odd则表示奇数个，even是偶数个 */
+        /* .paren ul li:nth-child(odd) {
+            background-color: greenyellow;
+        } */
+        /* n是公式，则n从0开始计算 */
+        
+        .paren ul li:nth-child(3n) {
+            /* 这个表示第3的倍数个元素 */
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mather">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+    <div class="paren">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+        </ul>
+    </div>
+</body>
+
+</html>
