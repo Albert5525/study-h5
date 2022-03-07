@@ -1,0 +1,303 @@
+.de_crumb {
+    margin: 25px 0 0px;
+}
+
+.de_crumb a {
+    margin-right: 10px;
+}
+
+.preview_wrap {
+    float: left;
+    width: 400px;
+    height: 559px;
+    padding-top: 10px;
+    /* background-color: pink; */
+}
+
+.preview_img {
+    width: 398px;
+    height: 398px;
+    text-align: center;
+    border: 1px solid #ededed;
+}
+
+.preview_list {
+    position: relative;
+    margin-top: 64px;
+    height: 58px;
+}
+
+.list_item {
+    width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.list_item li {
+    float: left;
+    width: 56px;
+    height: 56px;
+    margin: 0 3px;
+    border: 1px solid transparent;
+}
+
+.list_item .list_item_current {
+    border: 1px solid #c81623;
+}
+
+.preview_list_pren,
+.preview_list_next {
+    position: absolute;
+    width: 22px;
+    height: 58px;
+    border: none;
+    top: 0px;
+}
+
+.preview_list_pren {
+    left: 0px;
+    background-image: url(../upload/详情小图-pren_03.jpg);
+}
+
+.preview_list_next {
+    right: 0px;
+    background-image: url(../upload/详情小图-next_03.jpg);
+}
+
+.prod_de {
+    float: left;
+    width: 721px;
+    height: 569px;
+    margin-left: 79px;
+    /* background-color: pink; */
+}
+
+.sku_name {
+    height: 30px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.news {
+    height: 32px;
+    color: #e12228;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* summary start */
+
+.summary dl {
+    overflow: hidden;
+}
+
+.summary dd,
+.summary dt {
+    float: left;
+    /* height: 65px; */
+}
+
+.summary dt {
+    width: 60px;
+    line-height: 36px;
+    padding-left: 10px;
+}
+
+.summary_price,
+.summary_promotion {
+    position: relative;
+    padding: 10px 0;
+    background-color: #fee9eb;
+}
+
+.remark {
+    position: absolute;
+    top: 20px;
+    right: 11px;
+}
+
+.remark_total {
+    color: #1474af;
+}
+
+.price {
+    font-size: 24px;
+    color: #e3373c;
+}
+
+.summary_promotion dd {
+    width: 450px;
+    line-height: 36px;
+}
+
+.summary_promotion {
+    padding: 0;
+}
+
+.summary_promotion em {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    background-color: #c81623;
+    line-height: 22px;
+    text-align: center;
+}
+
+.summary_support dd {
+    line-height: 36px;
+}
+
+.choose_color a,
+.choose_version a,
+.choose_capture a,
+.choose_buy_style a,
+.choose_meal a {
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    margin-right: 8px;
+    text-align: center;
+    line-height: 41px;
+    color: #333333;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+}
+
+.summary a.current {
+    border: 1px solid #c81623;
+}
+
+.choose_version a,
+.choose_capture a,
+.choose_buy_style a,
+.choose_meal a {
+    padding: 0 13px;
+    height: 32px;
+    line-height: 32px;
+}
+
+.choose_version,
+.choose_capture,
+.choose_buy_style,
+.choose_meal {
+    overflow: hidden;
+    margin-top: 7px;
+    ;
+}
+
+.choose_meal {
+    margin-top: 22px;
+}
+
+.add_cart {
+    width: 142px;
+    height: 46px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #c81623;
+    border: none;
+}
+
+.good_num {
+    position: relative;
+    width: 49px;
+    height: 44px;
+    border: 1px solid #cccccc;
+}
+
+.good_num input {
+    display: inline-block;
+    width: 33px;
+    height: 100%;
+    text-align: center;
+    border: none;
+    /* border-right: none; */
+}
+
+.good_num button {
+    position: absolute;
+    width: 15px;
+    height: 22px;
+    right: 0px;
+    border: none;
+    border-left: 1px solid #ccc;
+}
+
+.good_num button.add {
+    top: 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.good_num button.sub {
+    bottom: 0px;
+}
+
+
+/* summary end */
+
+.aside {
+    float: left;
+    width: 208px;
+    height: 1000px;
+    border: 1px solid #dddddd;
+}
+
+.detail {
+    float: left;
+    width: 977px;
+    height: 1000px;
+    margin-left: 11px;
+    border: 1px solid #dddddd;
+}
+
+.tab_list {
+    line-height: 33px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tab_list li {
+    float: left;
+    width: 103px;
+    height: 33px;
+    border-bottom: 1px solid #dddddd;
+    background-color: #f1f1f1;
+}
+
+.tab_list .second {
+    width: 104px;
+    border-left: 1px solid #dddddd;
+}
+
+.tab_list li.current {
+    border-bottom: 1px solid transparent;
+    background-color: #fff;
+    color: #c81623;
+}
+
+.tab_con {
+    padding: 0 10px;
+}
+
+.tab_con li {
+    border-bottom: 1px solid #ccc;
+}
+
+.tab_con li p {
+    width: 170px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tab_con li button {
+    width: 88px;
+    height: 26px;
+    margin: 4px 59px 20px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+}

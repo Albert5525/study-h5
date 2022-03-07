@@ -1,21 +1,22 @@
-.recommend{
+.recommend {
     height: 163px;
     margin-top: 11px;
     /* background-color: pink; */
 }
 
-.recom-hd{
+.recom-hd {
     float: left;
     width: 200px;
     height: 100%;
     background-image: url(../img/recm_03.jpg);
 }
 
-.recom-bd{
+.recom-bd {
     height: 100%;
     background-color: #ebebeb;
 }
-.recom-bd li{
+
+.recom-bd li {
     float: left;
     margin-top: 10px;
     /* background-color: pink; */

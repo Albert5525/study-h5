@@ -1,74 +1,84 @@
 /* 公共样式 */
-.fl{
+
+.fl {
     float: left;
 }
-.fr{
+
+.fr {
     float: right;
 }
-.w{
+
+.w {
     width: 1200px;
     margin: 0 auto;
 }
-.last{
+
+.last {
     border: none;
 }
-.style-red{
+
+.style-red {
     color: #c81623;
 }
 
+
 /* 字体样式 */
+
 @font-face {
     /* 注意字体名称，要使用的地方要和这里写的一致 */
     font-family: 'icomoon';
     /* 一定注意路径 */
     src: url('../fonts/icomoon.eot?7kkyc2');
-    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
-    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
-    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+    src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-.icomon{
+
+.icomon {
     font-family: 'icomoon';
     font-size: 16px;
     line-height: 26px;
 }
 
+
 /* 顶部导航栏start */
-.header li{
+
+.header li {
     float: left;
 }
-.header { 
+
+.header {
     height: 31px;
     line-height: 31px;
     background-color: #f1f1f1;
 }
 
-
-.header .leftcut li,.rightcut li{
+.header .leftcut li,
+.rightcut li {
     text-align: center;
     color: #666666;
-    
 }
 
-.spacer{
+.spacer {
     margin: 9px 14px 0;
     height: 12px;
     width: 1px;
     background-color: #666666;
 }
 
+
 /* 顶部导航栏end */
 
 
 /* ======================= */
-.searchbar{
+
+.searchbar {
     position: relative;
     height: 105px;
     /* background-color: pink; */
 }
-.logo{
+
+.logo {
     position: absolute;
     width: 171px;
     height: 61px;
@@ -77,26 +87,29 @@
     margin-top: -30px;
 }
 
-.logo a{
+.logo a {
     display: inline-block;
     width: 171px;
     height: 61px;
-    background:transparent url(../img/logo.png) no-repeat center center;
-
+    background: transparent url(../img/logo.png) no-repeat center center;
     /* 首行缩进 */
     text-indent: -999px;
     /* 超出部分隐藏 */
     overflow: hidden;
 }
-.search{
+
+.search {
     position: absolute;
     top: 25px;
     left: 347px;
 }
-.search input,.search button{
+
+.search input,
+.search button {
     float: left;
 }
-.search input{
+
+.search input {
     width: 454px;
     height: 32px;
     text-indent: 10px;
@@ -104,34 +117,37 @@
     border: 2px solid #b1191a;
     border-right: none;
 }
-.search button{
+
+.search button {
     width: 62px;
     height: 36px;
     font-size: 16px;
     border: none;
     color: #f7f7f7;
-    background-color:  #b1191a;
+    background-color: #b1191a;
 }
 
-.searchbar ul{
+.searchbar ul {
     position: absolute;
     top: 69px;
     left: 359px;
 }
 
-.searchbar li{
+.searchbar li {
     float: left;
     margin-right: 25px;
 }
 
-.car{
+.car {
     font-family: 'icomoon';
     color: #db5c5c;
 }
-.arrow{
+
+.arrow {
     font-family: 'icomoon';
 }
-.searchbar .shopcar{
+
+.searchbar .shopcar {
     position: absolute;
     width: 138px;
     height: 34px;
@@ -139,12 +155,11 @@
     right: 64px;
     text-align: center;
     line-height: 34px;
-    background-color: #f7f7f7;    
+    background-color: #f7f7f7;
     border: 1px solid #dfdfdf;
 }
 
-
-.count{
+.count {
     position: absolute;
     bottom: 25px;
     left: 104px;
@@ -156,40 +171,46 @@
     border-radius: 7px 7px 7px 0;
     background-color: #e60012;
 }
+
+
 /* ======================= */
 
+
 /* 全部商品 */
-.nav{
+
+.nav {
     border-bottom: 2px solid #b1191a;
 }
-.nav>div{
+
+.nav>div {
     position: relative;
     height: 45px;
-    
     font-size: 16px;
     text-align: center;
-
     /* background-color: pink; */
 }
 
+
 /* ========================================= */
-.nav .dropdown{
+
+.nav .dropdown {
     position: absolute;
     background-color: #b1191a;
     color: #ffffff;
 }
 
-.dropdown .dt{
+.dropdown .dt {
     line-height: 45px;
     width: 209px;
 }
-.dropdown .dd{
+
+.dropdown .dd {
     /* display: none; */
     background-color: #c81623;
     margin-top: 2px;
 }
 
-.dropdown .dd a{
+.dropdown .dd a {
     display: inline-block;
     position: relative;
     width: 208px;
@@ -201,11 +222,13 @@
     font-size: 14px;
     color: #ffffff;
 }
-.dropdown .dd a:hover{
+
+.dropdown .dd a:hover {
     background-color: #fff;
     color: #b1191a;
 }
-.dropdown .dd em{
+
+.dropdown .dd em {
     /* display: inline-block; */
     /* margin-left: 78px; */
     position: absolute;
@@ -214,99 +237,112 @@
     color: #fff;
 }
 
-
-
-.navitems{
+.navitems {
     position: absolute;
     top: 0px;
     left: 209px;
     margin-left: 12px;
 }
-.navitems li{
+
+.navitems li {
     float: left;
 }
-.navitems a{
+
+.navitems a {
     display: block;
     height: 45px;
     line-height: 45px;
     padding: 0 26px;
 }
 
+
 /* ========================================= */
 
+
 /* page footer start */
-.footer{
+
+.footer {
     height: 417px;
     background-color: #f5f5f5;
 }
 
-.footer>div{
+.footer>div {
     /* background-color: pink; */
 }
-.mod_service{
+
+.mod_service {
     height: 79px;
     padding-top: 30px;
     border-bottom: 1px solid #ededed;
     /* text-align: center; */
 }
-.mod_service li{
+
+.mod_service li {
     width: 240px;
     float: left;
 }
-.mod_service_img{
+
+.mod_service_img {
     float: left;
     margin-left: 36px;
 }
-.mode_service_title{
+
+.mode_service_title {
     float: left;
     margin-left: 10px;
 }
-.mode_service_title h5{
+
+.mode_service_title h5 {
     margin: 5px 0;
 }
 
-
-.mod_help{
+.mod_help {
     height: 187px;
     border-bottom: 1px solid #ededed;
 }
-.mod_help_item{
+
+.mod_help_item {
     float: left;
     width: 150px;
     padding: 20px 0 0 50px;
 }
-.mod_help_item_title{
+
+.mod_help_item_title {
     height: 26px;
-    
     font-size: 16px;
 }
-.mod_help_item dd{
+
+.mod_help_item dd {
     font-size: 12px;
     height: 20px;
 }
 
 .mod_help_app p,
-.mod_help_app dt{
+.mod_help_app dt {
     margin-left: 10px;
 }
-.mod_help_app img{
+
+.mod_help_app img {
     margin: 7px 0;
 }
 
-
-
-.mod_copyright{
+.mod_copyright {
     padding-top: 20px;
     text-align: center;
     font-size: 12px;
 }
-.mod_copyright a{
+
+.mod_copyright a {
     margin: 0 15px;
 }
-.mode_copyright_links{
+
+.mode_copyright_links {
     margin-bottom: 15px;
 }
-.mod_copyright_info{
+
+.mod_copyright_info {
     line-height: 20px;
 }
+
+
 /* page footer end */

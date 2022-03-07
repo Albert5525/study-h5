@@ -1,11 +1,12 @@
-.main{
+.main {
     width: 982px;
     height: 455px;
     /* background-color: pink; */
     margin-left: 219px;
     margin-top: 10px;
 }
-.main .focus{
+
+.main .focus {
     position: relative;
     width: 721px;
     height: 100%;
@@ -13,7 +14,7 @@
 }
 
 .main .focus-left,
-.main .focus-right{
+.main .focus-right {
     position: absolute;
     width: 24px;
     height: 40px;
@@ -24,27 +25,31 @@
     line-height: 40px;
     font-size: 24px;
     color: #e4e4e4;
-    background:rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .3);
 }
-.main .focus-left{
+
+.main .focus-left {
     border-top-right-radius: 24px;
     border-bottom-right-radius: 24px;
     left: 0px;
 }
-.main .focus-right{
+
+.main .focus-right {
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
     right: 0px;
 }
 
+
 /* 小圆圈 */
-.circle{
+
+.circle {
     position: absolute;
     bottom: 10px;
     left: 25px;
 }
 
-.circle li{
+.circle li {
     float: left;
     width: 4px;
     height: 4px;
@@ -52,54 +57,61 @@
     border: 2px solid rgba(255, 255, 255, .5);
     border-radius: 4px;
     cursor: pointer;
-    
 }
-.current{
+
+.current {
     background-color: #fff;
 }
 
-.main .newsflash{
+.main .newsflash {
     margin-left: 9px;
     width: 250px;
     height: 100%;
 }
-.news{
+
+.news {
     width: 248px;
     height: 163px;
     margin-top: 1px;
     border: 1px solid #e4e4e4;
 }
 
-.news-hd{
+.news-hd {
     height: 32px;
-    padding:0 15px;
+    padding: 0 15px;
     font-size: 14px;
     line-height: 32px;
     border-bottom: 1px dotted #e4e4e4;
 }
-.news-hd a{
+
+.news-hd a {
     float: right;
     font-family: 'icomoon';
     font-size: 12px;
 }
-.news-bd{
+
+.news-bd {
     padding: 10px 0 0 15px;
 }
-.news-bd li{
+
+.news-bd li {
     height: 24px;
     font-size: 12px;
 }
-.lifeservice{
+
+.lifeservice {
     width: 248px;
     height: 208px;
     overflow: hidden;
     border: 1px solid #e4e4e4;
     border-top: none;
 }
-.lifeservice ul{
+
+.lifeservice ul {
     width: 252px;
 }
-.lifeservice li{
+
+.lifeservice li {
     float: left;
     width: 62px;
     height: 69px;
@@ -108,12 +120,13 @@
     border-left: none;
 }
 
-.lifeservice a{
+.lifeservice a {
     display: block;
     height: 45px;
     padding-top: 15px;
 }
-.service-ico{
+
+.service-ico {
     display: block;
     width: 24px;
     height: 24px;
@@ -121,55 +134,63 @@
     /* background-color: pink; */
     background: transparent no-repeat url(../img/icons.png);
 }
-.service-ico-huafei{
+
+.service-ico-huafei {
     background-position: -17px -16px;
 }
-.service-ico-feiji{
+
+.service-ico-feiji {
     background-position: -78px -16px;
 }
-.service-ico-dianyingpiao{
+
+.service-ico-dianyingpiao {
     background-position: -140px -16px;
 }
-.service-ico-game{
+
+.service-ico-game {
     background-position: -205px -16px;
 }
 
-.service-ico-caipiao{
+.service-ico-caipiao {
     background-position: -17px -88px;
 }
-.service-ico-jiayouka{
+
+.service-ico-jiayouka {
     background-position: -78px -88px;
 }
-.service-ico-jiudian{
+
+.service-ico-jiudian {
     background-position: -140px -88px;
-    
 }
-.service-ico-huochepiao{
+
+.service-ico-huochepiao {
     background-position: -205px -88px;
 }
 
-
-.service-ico-zhongchou{
+.service-ico-zhongchou {
     background-position: -17px -159px;
 }
-.service-ico-licai{
+
+.service-ico-licai {
     background-position: -78px -159px;
 }
-.service-ico-lipinka{
+
+.service-ico-lipinka {
     background-position: -140px -159px;
 }
-.service-ico-baitiao{
+
+.service-ico-baitiao {
     background-position: -205px -159px;
 }
 
-.lifeservice p{
+.lifeservice p {
     display: block;
     height: 30px;
     line-height: 30px;
     text-align: center;
 }
 
-.mod_bargen{
+.mod_bargen {
     width: 250px;
     height: 75px;
     margin-top: 5px;

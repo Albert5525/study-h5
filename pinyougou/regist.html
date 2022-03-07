@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/regist.css">
+    <title>注册</title>
+</head>
+
+<body>
+    <div class="w">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container_hd">
+                <p class="left">注册新用户</p>
+                <p class="right">我有账号，去
+                    <a href="#">登录</a>
+                </p>
+            </div>
+            <div class="regist_form">
+                <ul>
+                    <li>
+                        <label for="tel">手机号码：</label>
+                        <input type="text" id="tel">
+                        <span class="error">
+                            <i class="error_icon"></i>
+                            手机号码格式不正确，请重新输入</span>
+                    </li>
+                    <li>
+                        <label for="tel_verify_code">短信验证码：</label>
+                        <input type="text" id="tel_verify_code">
+                        <span class="error">
+                    </li>
+                    <li>
+                        <label for="pwd">登录密码：</label>
+                        <input type="password" id="pwd">
+                        <span class="error">
+                            <i class="error_icon"></i>
+                            密码不少于6位数，请重新输入</span>
+                    </li>
+                    <li class="safe">
+                        密码强度
+                        <em class="ruo">弱</em>
+                        <em class="zhong">中</em>
+                        <em class="qiang">强</em>
+                    </li>
+                    <li>
+                        <label for="pwd_check">确认密码：</label>
+                        <input type="password" id="pwd_check">
+                        <span class="error">
+                            <i class="error_icon"></i>
+                            密码不一致，请重新输入</span>
+                    </li>
+                    <li class="agreen">
+                         <input type="checkbox" class="xieyi">同意协议并注册 <a href="#">《知果果用户协议》</a>
+                    </li>
+                    <li class="regist">
+                        <input type="submit" value="立即注册">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
