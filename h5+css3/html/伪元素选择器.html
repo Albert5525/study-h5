@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素选择器</title>
+    <style>
+        /* 
+                伪元素选择器
+            选择符              简介
+            ::before            在元素内部的千亩安插入内容
+            ::after             在元素内部的后面插入内容
+
+            注意：
+                before和after必须有content属性
+                brfore在内容的前面，after在内容的后面
+                before和after创建一个元素，但是属于行内元素
+                因为在dom里面看不见刚才创建的元素，所以我们称为伪元素
+                伪元素和标签选择器一样，权重为1
+         */
+        
+        div::after {
+            content: "我";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div>是</div>
+</body>
+
+</html>
