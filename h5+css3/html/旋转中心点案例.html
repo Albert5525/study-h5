@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>旋转中心点案例</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+            background-color: greenyellow;
+            overflow: hidden;
+        }
+        
+        div::before {
+            content: "哈哈";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: hotpink;
+            transform-origin: left bottom;
+            transform: rotate(90deg);
+            transition: all .3s;
+        }
+        
+        div:hover::before {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
