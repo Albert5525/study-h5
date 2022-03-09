@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2D转换之缩放scale</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        
+        div:hover {
+            /* 
+            transform:scale(x,y) :里面写的数字不跟单位，x和y是缩放的倍数
+            transform: scale(2, 2)。x指的是x方向上的倍数，y指的是y方向上的倍数
+            transform: scale(2).表示宽度和高度都是缩放为原来的2倍。
+            x和y小于1则表示缩放。
+            */
+            transform: scale(4, 4);
+            transform-origin: left top;
+            /* 
+                scale的优势：
+                    1.不会影响其他元素。
+                    2. 可以设置缩放的中心点。默认是以中心点为缩放的中心点
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="baby" style="width: 200px;height: 200px;background-color: blue;"></div>
+</body>
+
+</html>
