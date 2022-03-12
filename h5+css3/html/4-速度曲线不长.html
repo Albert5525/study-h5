@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>速度曲线步长</title>
+    <style>
+        /* steps 就是分几步来完成我们的动画 有了steps 就不需要在写 ease 或者linear了 */
+        
+        @keyframes w {
+            0% {
+                width: 0;
+                height: 20px;
+            }
+            100% {
+                width: 200px;
+                height: 20px;
+                /* height: 20px; */
+            }
+        }
+        
+        div {
+            width: 0;
+            height: 20px;
+            /* height: 20px; */
+            /* background-color: pink; */
+            overflow: hidden;
+            /* text-align: center; */
+            line-height: 20px;
+            font-size: 16px;
+            animation: w 10 s .5s steps(16) forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div>我是付世明</div>
+</body>
+
+</html>

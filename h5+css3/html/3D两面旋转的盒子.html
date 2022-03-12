@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D两面旋转的盒子</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: all .4s;
+        }
+        
+        .first,
+        .second {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            line-height: 300px;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+        }
+        
+        .second {
+            background-color: pink;
+            transform: rotateY(180deg);
+        }
+        
+        .first {
+            background-color: deeppink;
+            z-index: 1;
+        }
+        
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+        
+        .box:hover .second {
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="first">我在这里等你</div>
+        <div class="second">魅力的大西安</div>
+    </div>
+</body>
+
+</html>

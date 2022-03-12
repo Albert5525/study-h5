@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2D转换</title>
+    <style>
+        /* 
+            定义2D转换中的移动，沿着X和Y轴移动坐标
+            translate最大的特点：不会影响到其他元素的位置
+            translate中的百分比单位是相对自身元素的translate:(50%,50%);
+            对行内标签没有效果
+         */
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transform: translate(x,y) */
+            /* transform: translate(100px, 100px) */
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+        }
+        
+        .parent {
+            width: 800px;
+            height: 800px;
+            background-color: blue;
+            position: relative;
+        }
+        
+        .son {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="parent">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>
