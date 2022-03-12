@@ -32,18 +32,22 @@
             border-radius: 50%;
         }
         
-        .first {
-            background-color: deeppink;
-            z-index: 1;
-        }
-        
         .second {
             background-color: pink;
             transform: rotateY(180deg);
         }
         
+        .first {
+            background-color: deeppink;
+            z-index: 1;
+        }
+        
         .box:hover {
             transform: rotateY(180deg);
+        }
+        
+        .box:hover .second {
+            z-index: 2;
         }
     </style>
 </head>
