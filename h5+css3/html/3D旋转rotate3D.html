@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D旋转rotate3d</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            transition: all .5s;
+        }
+        
+        img:hover {
+            transform: rotate3d(1, 1, 0, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../img/pikaqiu.jpg" alt="">
+</body>
+
+</html>
