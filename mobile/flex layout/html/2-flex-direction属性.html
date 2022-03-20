@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-flex-direction属性</title>
+    <style>
+        div {
+            display: flex;
+            /* 默认主轴的排列方式是x轴 */
+            /* flex-direction: row; */
+            flex-direction: column;
+            width: 80%;
+            height: 300px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        
+        div span {
+            /* width: 150px; */
+            flex: 1;
+            height: 100px;
+            background-color: blue;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+
+</html>

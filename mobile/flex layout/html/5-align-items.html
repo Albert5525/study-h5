@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-align-items属性</title>
+    <style>
+        div {
+            display: flex;
+            /* 设置主轴 */
+            flex-direction: row;
+            /* justify-content设置主轴上的子元素排列方式 */
+            justify-content: center;
+            /* 设置侧轴上的子元素的排列方式.注意这个只适用于单行元素，多行元素不生效 */
+            align-items: center;
+            width: 80%;
+            height: 300px;
+            text-align: center;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        
+        div span {
+            width: 150px;
+            height: 100px;
+            margin: 5px;
+            line-height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+</body>
+
+</html>
