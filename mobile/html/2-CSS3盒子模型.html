@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <title>CSS3盒子模型</title>
+    <style>
+        /* 传统盒子模型盒子=width+border+padding */
+        
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+            border: 2px solid #CCC;
+        }
+        
+        div:nth-child(2) {
+            /* 这句话就让盒子变成了css3的盒子模型 */
+            /* css3的盒子模型border和padding不会再撑大盒子了 */
+            box-sizing: border-box;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            padding: 10px;
+            border: 2px solid #CCC;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <a href="#">aaa</a>
+</body>
+
+</html>

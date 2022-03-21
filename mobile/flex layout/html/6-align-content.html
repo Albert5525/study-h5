@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-align-content属性</title>
+    <style>
+        /* 
+            align-content设置侧轴上的子元素排列方式（多行）
+            设置子元素在侧轴上的排列方式并且只能用于子项出现多行的情况（多行），在单行下是没有效果的
+
+            属性值                          说明
+            flex-start                      默认值在侧轴的头部开始排列
+            flex-end                        在侧轴的尾部开始排列
+            center                          在侧轴的中间显示
+            space-around                    子项在侧轴平分剩余空间
+            space-between                   子项在侧轴先分布在两头，在平分剩余空间
+            stretch                         设置子项元素高度平分父元素高度
+            
+            ===================================================================================
+            align-content和align-items区别
+            align-items适用于单行情况下，只有上下对齐，居中和拉伸
+            align-content适用于换行（多行）的情况（单行情况下无效），可以设置上对齐，下对齐，居中，拉伸以及平均分配剩余空间
+            总结就是单行找align-items，多行找align-content
+        */
+        
+        div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* 设置多行子元素在侧轴上的排列方式 */
+            align-content: space-between;
+            width: 80%;
+            height: 400px;
+            text-align: center;
+            background-color: pink;
+            color: #fff;
+            margin: 0 auto;
+        }
+        
+        div span {
+            width: 150px;
+            height: 100px;
+            line-height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+    </div>
+</body>
+
+</html>
