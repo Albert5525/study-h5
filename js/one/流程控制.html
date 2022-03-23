@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流程控制</title>
+    <script>
+        // if流程控制
+        if (5 > 4) {
+            console.log('哈哈');
+        } else {
+            console.log('呵呵');
+        }
+        // 弹出一个输入框，要求用户输入年龄，如果大于18岁，允许进入网吧
+        var input = prompt("请输入年龄：");
+        if (parseInt(input) > 18) {
+            alert('恭喜你可以成为本网吧的会员');
+        } else {
+            alert('非常抱歉，你的年龄不符合法律要求！！！');
+        }
+        //判断闰年
+        var inputYear = prompt('情书如年份：');
+        if (parseInt(inputYear) % 400 == 0) {
+
+            alert(inputYear + '是闰年!!!');
+        } else {
+            alert(inputYear + '不是闰年');
+        }
+        // switch case
+        var action = prompt('今天去干啥呀？');
+        switch (action) {
+            case '洗澡':
+                alert('今天去' + action);
+                break;
+            case '睡觉':
+                alert('今天去' + action);
+                break;
+            case '打球':
+                alert('今天去' + action);
+                break;
+            case '上网':
+                alert('今天去' + action);
+                break;
+            default:
+                alert('TMD今天啥也不干');
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
