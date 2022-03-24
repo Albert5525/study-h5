@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+    <script>
+        // 构造函数，使用构造函数创建对象时要使用new关键字
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            this.sing = function sing(singName) {
+                console.log(this.name + '在唱' + singName);
+            }
+        }
+        var liudehua = new Person('刘德华', 66);
+        liudehua.sing('冰雨');
+        console.log(typeof(liudehua))
+        console.log(liudehua);
+        var zhangxueyou = new Person('张学友', 78);
+        zhangxueyou.sing('烦恼歌');
+        // 只要new Person这个构造函数就创建了一个对象
+        class People {
+            People(name, age, sex) {
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            sing(singName) {
+                console.log(this.name + '在唱' + singName);
+            }
+        }
+
+        var xusong = new People('许嵩', 36, '男');
+        console.log(typeof(xusong));
+        xusong.sing('半城烟沙');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
