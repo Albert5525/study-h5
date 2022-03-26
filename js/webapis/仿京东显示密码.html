@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿照京东显示密码</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+            border-bottom: 1px solid #CCCCCC;
+        }
+
+        .box label img {
+            width: 24px;
+        }
+
+        .box .pwd_label {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 42px;
+            right: 24px;
+            background: url("img/close_eye.png");
+            background-size: 24px 24px;
+        }
+        .box .login{
+            width: 370px;
+            background-color: #FF2B06;
+            border: none;
+            border-radius: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="pwd" class="pwd_label" id="pwd_label">
+            <img src="img/close_eye.png">
+        </label>
+        <input type="username" name="" id="username" placeholder="邮箱/用户名/登录手机">
+        <input type="password" name="" id="pwd" placeholder="密码">
+        <button class="login">登录</button>
+    </div>
+
+
+    <script>
+        /*
+        * 利用DOM可以操作如下表单元素的属性
+        * type  value   checked selected    disabled
+        *
+        * */
+        var isChange = false;
+        var pwd_label = document.querySelector(`#pwd_label`);
+        pwd_label.onclick = function () {
+            var img = pwd_label.querySelector("img");
+            pwd = document.querySelector("#pwd");
+            if (isChange) {
+                img.src = 'img/close_eye.png';
+                pwd.type = 'password';
+            } else {
+                img.src = 'img/open_eye.png';
+                pwd.type = 'text';
+            }
+            isChange = !isChange;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作元素修改样式</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var isChange = false;
+        var divElement = document.querySelector('div');
+        divElement.onclick = function () {
+            if (isChange) {
+                //注意js修改的样式是行内样式，因此js修改的样式权重较高
+                this.style.backgroundColor = 'pink';
+            } else {
+                this.style.backgroundColor = 'green';
+            }
+            isChange = !isChange;
+        }
+    </script>
+</body>
+</html>
