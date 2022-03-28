@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>兄弟节点</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div = document.querySelector("div");
+        //    1.nextSibling下一个兄弟节点  包含元素节点或者  文本节点等等
+        console.log(div.nextSibling);
+        console.log(div.previousSibling);
+
+        //    2.nextElementSibling得到下一个兄弟元素节点
+        console.log(div.nextElementSibling);
+        console.log(div.previousElementSibling);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单版发布留言(添加节点)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="content"></textarea>
+    <button id="btn">发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        var btn = document.getElementById("btn");
+        var ul = document.querySelector("ul");
+        var content = document.getElementById("content");
+        btn.onclick = function () {
+            var li = document.createElement("li");
+            if (content.value != null && !isNull(content.value)) {
+                li.innerHTML = content.value;
+                var lis = ul.querySelectorAll("li");
+                if (lis == null) {
+                    ul.appendChild(li);
+                } else {
+                    ul.insertBefore(li, lis[0]);
+                }
+            }
+            content.value = '';
+        }
+
+        //判断字符串是否为空
+        function isNull(str) {
+            if (str == "") return true;
+            var regu = "^[ ]+$";
+            var re = new RegExp(regu);
+            return re.test(str);
+        }
+    </script>
+    </div>
+</body>
+</html>
