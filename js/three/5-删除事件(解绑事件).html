@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除事件(解绑事件)</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var divs = document.querySelectorAll("div");
+        //传统方式添加事件和解绑事件
+        /*for (let i = 0; i < divs.length; i++) {
+            divs[i].onclick=function () {
+                alert("哈哈");
+                this.onclick=null;
+            }
+        }*/
+
+        for (let i = 0; i < divs.length; i++) {
+            divs[i].addEventListener("click",fn);
+        }
+        function fn() {
+            alert("事件监听器");
+            this.removeEventListener("click",fn);
+        }
+    </script>
+</body>
+</html>

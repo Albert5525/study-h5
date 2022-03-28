@@ -33,6 +33,10 @@
             font-size: 14px;
             margin: 15px 0;
         }
+
+        li a {
+            float: right
+        }
     </style>
 </head>
 
@@ -49,7 +53,11 @@
         btn.onclick = function () {
             var li = document.createElement("li");
             if (content.value != null && !isNull(content.value)) {
-                li.innerHTML = content.value;
+                li.innerHTML = content.value + "\t <a href='javascript:;'>删除</a>";
+                var a = li.querySelector("a");
+                a.onclick=function () {
+                    ul.removeChild(this.parentNode);
+                }
                 var lis = ul.querySelectorAll("li");
                 if (lis == null) {
                     ul.appendChild(li);

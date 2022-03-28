@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除节点</title>
+</head>
+<body>
+    <button>删除</button>
+    <ul>
+        <li>胸大</li>
+        <li>熊二</li>
+        <li>光头强</li>
+    </ul>
+    <script>
+        var button = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        button.onclick = function () {
+            var lis = ul.querySelectorAll("li");
+            if (lis == null || lis.length == 0) {
+                this.disabled=true;
+            } else {
+                ul.removeChild(lis[0]);
+            }
+        }
+    </script>
+</body>
+</html>

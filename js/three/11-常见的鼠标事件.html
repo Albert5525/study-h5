@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见的鼠标事件</title>
+</head>
+<body>
+    我是不愿意被分享的文字
+    <script>
+        /*
+        * 鼠标事件                      触发条件
+        * onclick                       鼠标点击左键出发
+        * onmouseover                   鼠标经过出发
+        * onmouseout                    鼠标离开出发
+        * onfocus                       或得鼠标焦点触发
+        * onblur                        失去鼠标焦点触发
+        * onmousemove                   鼠标移动触发
+        * onmouseup                     鼠标弹起触发
+        * onmousedown                   鼠标按下触发
+        * contextmenu                   contextmenu主要控制应该合适显示上下文菜单，取消默认上下文菜单
+        * selectstart                   禁止鼠标选中
+        * */
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener("selectstart",function (e) {
+            e.preventDefault();
+        });
+
+        /*
+        * 鼠标事件对象
+        * 鼠标事件对象                说明
+        * e.clientX                 返回鼠标相对于浏览器窗口可视区的X坐标
+        * e.clientY                 返回鼠标相对于浏览器窗口可视区的Y坐标
+        * e.pageX                   返回鼠标相对于文档页面的X坐标
+        * e.pageY                   返回鼠标相对于文档页面的Y坐标
+        * e.screenX                 返回鼠标相对于电脑屏幕的X坐标
+        * e.screenY                 返回鼠标相对于电脑屏幕的Y坐标
+        * */
+    </script>
+</body>
+</html>

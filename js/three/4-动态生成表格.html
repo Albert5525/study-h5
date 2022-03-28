@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态生成表格</title>
+    <style>
+        .score_table {
+            width: 400px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .score_table thead {
+            background-color: #CCCCCC;
+        }
+
+        .score_table tbody tr:nth-child(2n) {
+            background-color: #adadad;
+            color: #FF2B06;
+        }
+
+        .score_table tbody tr:nth-child(2n+1) {
+            background-color: #b2dba1;
+            color: #ffffff;
+        }
+
+        .score_table tbody button {
+            background-color: red;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table class="score_table">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--        <tr>
+                    <td>弘历</td>
+                    <td>javascript</td>
+                    <td>100</td>
+                    <td>
+                        <a href="javascript:;">删除</a>
+                    </td>
+                </tr>-->
+        </tbody>
+    </table>
+    <script>
+        var tbody = document.querySelector(".score_table").querySelector("tbody");
+
+        var datas = [
+            {
+                name: "张三",
+                course: "javascript",
+                score: 100,
+                edit: "删除"
+            },
+            {
+                name: "弘历",
+                course: "javascript",
+                score: 97,
+                edit: "删除"
+            },
+            {
+                name: "李四",
+                course: "javascript",
+                score: 80,
+                edit: "删除"
+            }
+        ];
+        for (let i = 0; i < datas.length; i++) {
+            var tr = document.createElement("tr");
+            //遍历对象
+            for (const datasKey in datas[i]) {
+                // console.log(datasKey);
+                var td = document.createElement("td");
+                td.innerHTML = datas[i][datasKey];
+                tr.appendChild(td);
+                if (datasKey == "edit") {
+                    td.innerHTML = "<button>" + datas[i][datasKey] + "</button>";
+                    td.querySelector("button").onclick = function () {
+                        tbody.removeChild(this.parentNode.parentNode);
+                    }
+                }
+            }
+            tbody.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
