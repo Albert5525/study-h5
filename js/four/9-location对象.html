@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location对象</title>
+</head>
+<body>
+    <button>click</button>
+    <script>
+        /*
+        * location对象的属性         返回值
+        * location.href             获取或者设置整个URL
+        * location.host             返回主机(域名)
+        * location.port             返回端口号，如果未写返回字符串
+        * location.pathname         返回路径
+        * location.search           返回参数
+        * location.hash             返回片段， #后面内容  常见于链接  锚点
+        * location.assign           跟href一样，可以跳转页面（也称为重定向页面）
+        * location.replace          替换当前页面，因为不记录历史，所以不能后退页面
+        * location.reload           重新加载页面，相当于刷新按钮或者 f5 如果参数为true强制刷新
+        * ====================================================================================
+        *                       navigator对象
+        * navigator对象包含有关浏览器的信息，他有很多属性，最常用的userAgent，该属性可以返回由客户机发送服务器的user-agent头部的值
+        *
+        * =====================================================================================
+        *                       history对象方法
+        * back          后退
+        * forward       前进
+        * go(参数)       前进后退  参数是1 前进一个页面  如果是-1后退一个页面
+        * */
+        var button = document.querySelector("button");
+        button.addEventListener("click",function () {
+            location.href="http://www.google.com";
+            console.log(location.href);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件基础</title>
+    <!-- 
+        javascript使我们有能力创建动态页面，二时间是可以呗javascript侦测到的行为
+        简单理解：出发---相应机制。
+        网页中的每个元素都可以产生某些出发javascript的事件，例如，我们可以在用户点击某按钮时产生一个事件，然后去执行某些操作
+     -->
+</head>
+
+<body>
+    <div>123</div>
+    <button id="btn" style="color: aqua;background-color: pink;border: none;">唐伯虎</button>
+    <script>
+        // 点击一个按钮，弹出对话框
+        // 1.时间是有三个部分组成   事件源   时间类型   时间处理程序   我们也称为事件三要素
+        // （1）事件源   事件呗触发的对象   谁   按钮
+        var btn = document.querySelector("#btn");
+
+        // （2）事件类型  如何触发  什么事件  比如鼠标点击(onclick)还是鼠标经过  还是键盘按下
+        // （3）事件处理程序  通过一个函数负值的方式  完成
+        btn.onclick = function() {
+            alert('我是唐伯虎，我要点秋香');
+        }
+
+        /* 
+            执行事件的步骤
+            1.获取事件源
+            2.注册事件
+            3.天假事件处理程序（采取函数赋值的方式）
+        */
+        var divEle = document.querySelector("div");
+        divEle.onclick = function() {
+            console.log("我是123");
+        }
+    </script>
+</body>
+
+</html>

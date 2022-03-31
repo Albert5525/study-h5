@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <style>
+        span {
+            background-color: #2b2b2b;
+            color: #CCCCCC;
+        }
+    </style>
+</head>
+<body>
+    <span class="hour">0</span>
+    <span class="min">1</span>
+    <span class="sec">0</span>
+    <script>
+        var hour = document.querySelector(".hour");
+        var min = document.querySelector(".min");
+        var sec = document.querySelector(".sec");
+        var hour_time = parseInt(hour.innerHTML);
+        var min_time = parseInt(min.innerHTML);
+        var sec_time = parseInt(sec.innerHTML);
+        // console.log(hour.innerHTML);
+
+        var time1 = setInterval(calTime, 1000);
+
+        function calTime() {
+            sec_time-=1;
+            if (sec_time < 0) {
+                sec_time = 59;
+                sec.innerHTML = sec_time;
+
+                min_time -= 1;
+                if (min_time < 0) {
+                    min_time = 59;
+
+
+                    hour_time -= 1;
+                    if (hour_time < 0) {
+                        clearInterval(time1);
+                        alert("计时结束！！！");
+                        hour.innerHTML='00';
+                        min.innerHTML = '00';
+                        sec.innerHTML = '00';
+                    }
+                }
+            }
+            hour.innerHTML=hour_time;
+            min.innerHTML = min_time;
+            sec.innerHTML = sec_time;
+        }
+    </script>
+</body>
+</html>

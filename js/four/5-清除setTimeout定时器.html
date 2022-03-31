@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除setTimeout定时器</title>
+</head>
+<body>
+    <button>停止定时器</button>
+    <script>
+        var time1 = setTimeout(function () {
+            console.log("哈哈")
+        }, 3000);
+        document.querySelector("button").onclick = function () {
+            clearTimeout(time1);
+        };
+
+    </script>
+</body>
+</html>
