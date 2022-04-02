@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-offset与style的区别</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid #CCCCCC;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        /*
+        * offset与style的区别
+        *   offset                                              style
+        *   offset可以得到任意样式表中样式值                         style只能得到行内样式表中的样式值
+        *   offset系列获得的数值是没有单位的                         style获得的是带有单位的字符串
+        *   offsetWidth包含padding+border+width                  style.width获得不包含padding border的值
+        *   offsetWidth等属性是只读属性，只能获取不能赋值              style.width是可读写属性，可以获取也可以赋值
+        *   所以想要回去元素大小位置，用offset更合适                   所以想要给元素更改值，则需要用style改变
+        * */
+        window.onload = function () {
+            var father = document.querySelector(".father");
+            console.log("father.offsetWidth==" + father.offsetWidth);
+            console.log("father.style.width==" + father.style.width);
+        }
+    </script>
+</head>
+<body>
+    <div class="father"></div>
+</body>
+</html>
