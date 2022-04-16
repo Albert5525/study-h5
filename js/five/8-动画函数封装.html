@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画函数封装</title>
+    <style>
+        div {
+            position: absolute;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        /*
+        * 动画实现原理：
+        *   核心原理：通过定时器setInterval()不断移动盒子位置
+        *   实现步骤：
+        *       1.或得盒子当前位置
+        *       2.让盒子在当前位置上1个移动距离
+        *       3.利用定时器不断重复这个操作
+        *       4.加一个结束定时器的条件
+        *       5.注意次元素需要添加定位才能使用element.style.left
+        * */
+        window.onload = function () {
+            var div = document.querySelector(`div`);
+            var btn = document.querySelector("button");
+
+            btn.addEventListener("click", function () {
+                animate(div, 1000);
+            });
+
+
+            function animate(obj, target) {
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function () {
+                    if (obj.offsetLeft >= target) {
+                        clearInterval(obj.timer);
+                    } else {
+                        console.log(Math.ceil((target-obj.offsetLeft)/10));
+                        console.log("obj.offsetLeft======" + obj.offsetLeft);
+
+                        obj.style.left = obj.offsetLeft + (Math.ceil((target-obj.offsetLeft)/10)) + 'px';
+                    }
+                }, 10);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <button>点击开始动画</button>
+    <div></div>
+</body>
+</html>

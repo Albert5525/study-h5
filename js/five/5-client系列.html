@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>client系列</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            border-top: 10px solid red;
+            border-left: 20px solid black;
+            padding: 30px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        /*
+        * 元素可视区client系列
+        * 使用client系列的相关属性来获取元素可视区的相关信息，通过client系列的相关属性可以动态的得到该元素的边框大小，元素大小等。
+        *
+        *   client系列属性              作用
+        *   element.clientTop           返回元素上边框的大小
+        *   element.clientWidth         返回自身包含padding 内容区的宽度 不含边框  返回数值不带单位
+        *   element.clientHeight        返回自身包括padding  内容区的高度  不含边框 返回值不带单位
+        * */
+        window.addEventListener("load", function () {
+            var div = document.querySelector("div");
+            console.log("div.clientTop====" + div.clientTop);
+            console.log("div.clientLeft====" + div.clientLeft);
+            console.log("div.clientWidth====" + div.clientWidth);
+            console.log("div.clientHeight====" + div.clientHeight);
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
