@@ -28,20 +28,26 @@
             var btn = document.querySelector("button");
 
             btn.addEventListener("click", function () {
-                animate(div, 1000);
+                animate(div, 1000, function () {
+                    div.style.backgroundColor = 'green';
+                    window.alert("动画结束");
+                });
             });
 
 
-            function animate(obj, target) {
+            //动画函数添加回调函数
+            //回调函数原理：函数可以作为一个参数。见这个函数作为参数传到另一个函数里面，当那个函数执行完之后，在执行穿进去的这个函数，这个过程就叫做回调
+            function animate(obj, target, callback) {
                 clearInterval(obj.timer);
                 obj.timer = setInterval(function () {
                     if (obj.offsetLeft >= target) {
                         clearInterval(obj.timer);
+                        if (callback)
+                            callback();
                     } else {
-                        console.log(Math.ceil((target-obj.offsetLeft)/10));
+                        console.log(Math.ceil((target - obj.offsetLeft) / 10));
                         console.log("obj.offsetLeft======" + obj.offsetLeft);
-
-                        obj.style.left = obj.offsetLeft + (Math.ceil((target-obj.offsetLeft)/10)) + 'px';
+                        obj.style.left = obj.offsetLeft + (((target - obj.offsetLeft) / 10)>0?Math.ceil((target - obj.offsetLeft) / 10):Math.floor((target - obj.offsetLeft) / 10)) + 'px';
                     }
                 }, 10);
             }
