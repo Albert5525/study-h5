@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-offset系列</title>
+    <script>
+        /*
+        * 元素偏移量
+        * offset概述：使用offset系列相关属性可以动态的得到钙元素的位置(偏移)。大小等。
+        *   获得元素距离带有定位父元素的位置
+        *   获得元素自身的大小
+        *   注意：返回的数值不带单位
+        *   offset常用属性                          作用
+        *   element.offsetParent                   返回作为该元素带有定位的父级元素，如果父元素没有定位则返回body
+        *   element.offsetTop                       返回元素相对带有定位的父元素上方的偏移量
+        *   element.offsetLeft                      返回元素相对带有定位的父元素左边框的偏移
+        *   element.offsetWidth                     返回自身包括padding  边框  内容区的宽度  返回数值不带单位
+        *   element.offsetHeight                    返回自身包括padding 边框 内容区的高度  返回数值不带单位
+        * */
+        window.onload = function () {
+            var div = document.querySelector("div");
+            var son = document.querySelector(".son");
+            console.log("div.offsetHeight==" + div.offsetHeight);
+            console.log("div.offsetParent==" + div.offsetParent);
+            console.log("div.offsetTop==" + div.offsetTop);
+            console.log("div.offsetLeft==" + div.offsetLeft);
+            console.log("div.offsetWidth==" + div.offsetWidth);
+            console.log("=============");
+            console.log("son.offsetHeight==" + son.offsetHeight);
+            console.log("son.offsetParent==" + son.offsetParent);
+            console.log("son.offsetTop==" + son.offsetTop);
+            console.log("son.offsetLeft==" + son.offsetLeft);
+            console.log("son.offsetWidth==" + son.offsetWidth);
+        }
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .father {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px;
+        }
+
+        .son {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

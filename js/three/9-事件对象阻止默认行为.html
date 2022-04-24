@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件对象阻止默认行为</title>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <script>
+        var a = document.querySelector("a");
+        a.addEventListener("click",function (e) {
+            // 阻止默认行为(事件) 让链接不跳转  或者让提交按钮不提交
+            e.preventDefault();//dom标准写法
+        });
+    </script>
+</body>
+</html>

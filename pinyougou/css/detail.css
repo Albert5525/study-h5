@@ -15,11 +15,39 @@
 }
 
 .preview_img {
+    position: relative;
     width: 398px;
     height: 398px;
     text-align: center;
     border: 1px solid #ededed;
 }
+.mask{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    background-color: #FEDE4F;
+    opacity: .5;
+    cursor: no-drop;
+    border: 1px solid #CCCCCC;
+}
+.big{
+    display: none;
+    position: absolute;
+    top: -10px;
+    left: 410px;
+    width: 500px;
+    height: 500px;
+    background-color: pink;
+    overflow: hidden;
+
+    z-index: 999;
+}
+/*.big img{
+    width: 500px;
+}*/
 
 .preview_list {
     position: relative;

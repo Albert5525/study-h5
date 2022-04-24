@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根据标签名获取元素</title>
+</head>
+
+<body>
+    <ul>
+        <li>春风十里，不如等你</li>
+        <li>春风十里，不如等你</li>
+        <li>春风十里，不如等你</li>
+        <li>春风十里，不如等你</li>
+    </ul>
+    <ul id="shengpizi">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+    </ul>
+</body>
+<script>
+    var lis = document.getElementsByTagName('li');
+    console.log(lis);
+    var shengpizi = document.getElementById('shengpizi');
+    var spzlis = shengpizi.getElementsByTagName('li');
+    console.log(spzlis);
+</script>
+
+</html>

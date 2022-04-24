@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert("hello js");
+        console.log(100);
+        console.log('====================');
+        var num = 100;
+        var str = num.toString();
+        console.log(str);
+        console.log(typeof(num));
+        console.log(typeof(str));
+        console.log(String(num));
+        // 利用+号来拼接是隐式转换
+        console.log(typeof(num + ''));
+
+        console.log('====================');
+        // parseInt数值转换。可以将符合条件的字符串转换为数字，转换后的数字为整数
+        var age = prompt("请输入年龄");
+        console.log(parseInt(age) + 5);
+        // parseInt('120px')---> 120
+        console.log(parseInt('120px'));
+
+        // parseFloat('3.1415') 可以转换为浮点数
+        console.log(parseFloat('3.1415'));
+        // 利用Number来进行转换数值
+        console.log(Number('120'));
+
+        // 利用算数运算 -  * /隐式转换为数值
+        console.log('12' - 2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

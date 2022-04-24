@@ -1,0 +1,118 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册事件的两种方式</title>
+</head>
+<body>
+    <button>传统注册事件方式</button>
+    <button>方法监听注册事件</button>
+    <script>
+        /*
+        * 注册事件概述
+        * 给元素添加事件，成为注册事件或者绑定事件
+        * 注册事件有两种方式：传统方式和方法监听注册方式
+        * 传统方式：
+        *   利用on开头的时间如onclick
+        *   特点：注册事件的唯一性
+        *   同意元素同一时间只能设置一个处理函数，最后注册的处理函数将会覆盖之前注册的处理函数
+        * 方法监听注册方式：
+        *   w3c标准  推荐方式
+        *   addEventListener()他是一个方法
+        *   IE9之前的IE不支持此方法，可使用attachEvent()代替
+        *   eventTarget.addEventListener(tyoe,listener[,useCapture])
+        *   eventTarget.addEventListener()方法将制定的监听器注册到eventTarget(目标对象)上，当该对象触发指定事件就会执行处理函数
+        *   同一个元素可以添加多个相同事件
+        *   该方法接收三个参数：
+        *       type：事件类型字符串，比如click，mouseover，注意这里不要带on
+        *       listener：事件处理函数，事件发生时，会调用该监听函数
+        *       useCapture：可选参数，是一个布尔值，默认是false。
+        * */
+        var btns = document.querySelectorAll("button");
+        btns[0].onclick=function () {
+            alert("传统事件注册方式");
+        }
+        btns[1].addEventListener("click",sayHi);
+        function sayHi() {
+            alert("hi  事件注册的第二种方式");
+        }
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

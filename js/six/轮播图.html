@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script src="./animator.js"></script>
+    <script src="lunbo.js"></script>
+    <style>
+        /* 字体样式 */
+
+        @font-face {
+            /* 注意字体名称，要使用的地方要和这里写的一致 */
+            font-family: 'icomoon';
+            /* 一定注意路径 */
+            src: url('./fonts/icomoon.eot?7kkyc2');
+            src: url('./fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'), url('./fonts/icomoon.ttf?7kkyc2') format('truetype'), url('../fonts/icomoon.woff?7kkyc2') format('woff'), url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .rotation_img {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            margin: auto;
+            background-color: pink;
+        }
+
+        .lunbo_container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 721px;
+            height: 455px;
+            overflow: hidden;
+        }
+
+        .lunbo_container .img {
+            position: absolute;
+            /*width: 2884px;*/
+            height: 455px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .lunbo_container .img li {
+            float: left;
+        }
+
+        .lunbo_container .focus-left,
+        .lunbo_container .focus-right {
+            position: absolute;
+            width: 24px;
+            height: 40px;
+            top: 50%;
+            margin-top: -20px;
+            font-family: 'icomoon';
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            color: #e4e4e4;
+            background: rgba(0, 0, 0, .3);
+
+            cursor: pointer;
+        }
+        .rotation_img .focus-left{
+            left: 0;
+        }
+        .rotation_img .focus-right{
+            right: 0;
+        }
+
+        /* 小圆圈 */
+
+        .circle {
+            position: absolute;
+            bottom: 10px;
+            left: 25px;
+        }
+
+        .circle li {
+            float: left;
+            width: 4px;
+            height: 4px;
+            margin: 0 3px;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .current {
+            background-color: #f60400;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotation_img">
+        <div class="lunbo_container">
+            <a class="focus-left"></a>
+            <a class="focus-right"></a>
+            <ul class="img">
+                <li>
+                    <a href="http://www.baidu.com" target="_blank"><img src="imgs/focus.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="http://www.baidu.com" target="_blank"><img src="imgs/focus1.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="http://www.baidu.com" target="_blank"><img src="imgs/focus2.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href="http://www.baidu.com" target="_blank"><img src="imgs/focus3.jpg" alt=""></a>
+                </li>
+            </ul>
+            <ol class="circle">
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <style>
+
+
+    </style>
+    <script>
+        /*
+            setTimeout()定时器
+            window.setTimeout(调用函数，[延迟的毫秒数])
+            setTimeout()方法用于设置一个定时器，该定时器在定时器到期后执行调用函数
+        */
+        let print = window.setTimeout(printNum,1000);
+
+        var num=0;
+        function printNum() {
+            console.log(num);
+            num+=1;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

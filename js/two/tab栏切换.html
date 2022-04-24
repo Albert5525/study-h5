@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab栏切换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .tab {
+            width: 978px;
+            margin: 100px auto;
+        }
+
+        .tab_list {
+            height: 39px;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab_list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tab_list .current {
+            background-color: #c81623;
+            color: #fff;
+        }
+
+        .item_info {
+            padding: 20px 0 0 20px;
+        }
+
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current" index="0" data-time="time0">商品介绍</li>
+                <li data-index="1" data-time="time1">规格与包装</li>
+                <li data-index="2" data-time="time2">售后保障</li>
+                <li data-index="3" data-time="time3">商品评价（50000）</li>
+                <li data-index="4" data-time="time4">手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                商品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价（50000）模块内容
+            </div>
+            <div class="item">
+                手机社区模块内容
+            </div>
+
+        </div>
+    </div>
+    <script>
+        // 使用自定义属性li里面的index属性就是我们自己设置的自定义属性，便于后续操作
+        //element.属性值与element。getAttribute()的区别就是，element.属性值只能获取到元素自身有的属性，
+        // 而element.getAttribute（）可以获取到我们自定义的属性
+
+        //自定义属性的目的:是为了保存并使用数据,有些数据可以保存到页面中而不用保存到数据库中.
+        //H5规定自定义属性data-开头作为属性名并且赋值（element.setAttribute）
+
+        //H5新增获取自定属性的方法element.dataset获得自定义属性的集合，准确的说应该是java中的map,然后在点出他的属性值，注意这个时候属性值就不要加data-了
+        var tab_list = document.querySelector(".tab_list");
+        var lis = tab_list.querySelectorAll("li");
+        var tab_con = document.querySelector(".tab_con");
+        var items = tab_con.querySelectorAll(".item");
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].onclick = function () {
+                for (let j = 0; j < lis.length; j++) {
+                    lis[j].className = "";
+                }
+                this.className = "current";
+                alert(this.dataset.time);
+                itemDisplay(this.getAttribute("data-index"));
+            }
+        }
+
+        function itemDisplay(index) {
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.display = "none";
+            }
+            items[index].style.display="block";
+        }
+    </script>
+</body>
+</html>

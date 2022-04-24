@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父节点操作</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 100px auto;
+            border: 1px solid #FF2B06;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="erweima">X</span>
+    </div>
+    <script>
+        // 1. 父节点parentNode
+        var erweima = document.querySelector(".erweima");
+        erweima.onclick = function () {
+            //parentNode 得到的是离元素最近的父节点(亲爸爸)  如果找不到父节点就返回null
+            this.parentNode.style.display = "none";
+        }
+    </script>
+</body>
+</html>

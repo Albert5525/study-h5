@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串的不可变性</title>
+    <script>
+        // 字符串不可变和java中的String一样，只是指向了一个新的内存空间而已
+        var str = '字符串不可变和java中的String一样，只是指向了一个新的内存空间而已';
+        console.log("str.lastIndexOf('一')==" + str.lastIndexOf('一'));
+        console.log("str.IndexOf('一')==" + str.indexOf('一'));
+        console.log("str.IndexOf('一')==" + str.indexOf('一'));
+        console.log('=========================================');
+        // 返回字符位置
+        // 查找字符串‘abcoefoxyozzoppo’中所有o出现的位置以及次数
+        var finStr = 'abcoefoxyozzoppo';
+        var count = 0;
+        // console.log(finStr.charAt(2));
+        // console.log(finStr.substring(0, finStr.length));
+        for (var i = 0; i < finStr.length; i++) {
+            if (finStr.charAt(i) == 'z') {
+                console.log('第' + (count + 1) + '个z在第' + (i + 1) + '个位置出现');
+                count += 1;
+            }
+        }
+        console.log(finStr);
+        console.log('finStr中共有' + count + '个z');
+
+        // 查找字符串‘abcoefoxyozzoppo’中所有o出现的位置以及次数4 7 10 13 16
+        function countStr(originStr, findStr) {
+            var count = 0;
+            var temp = originStr;
+            var location = 0;
+            var originLocation = 0;
+            while (temp.indexOf(findStr) != -1) {
+                location = temp.indexOf(findStr)
+                temp = temp.substring(location + findStr.length);
+                count += 1;
+                console.log(temp);
+                originLocation += location;
+                originLocation += 1;
+                console.log('在' + originLocation + '位置出现');
+            }
+            console.log(count + '个' + findStr);
+
+        }
+        console.log('=================');
+        countStr(finStr, 'o');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

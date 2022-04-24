@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子节点操作</title>
+    <style>
+        div {
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        ul li {
+            list-style: none;
+            float: left;
+            margin: 10px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>li-1</li>
+        <li>li-2</li>
+        <li>li-3</li>
+        <li>li-4</li>
+    </ul>
+    <script>
+        // parentNode.childNodes返回包含指定节点的子节点的几个，该集合为及时更新的集合
+        // 注意：返回值里面包含了所有的子节点  包括元素节点，文本节点等。
+        var nodes = document.querySelector("ul").childNodes;
+        console.log(nodes);
+        // 如果只想获得里面的元素节点，则需要专门处理，所以不提倡使用childNodes
+        //元素节点的nodeType是1，文本节点的nodeType是0
+        for (let i = 0; i < nodes.length; i++) {
+            if (nodes[i].nodeType == 1) {
+                console.log(nodes[i])
+            }
+        }
+        //子节点
+        // parentNode.children是一个只读属性，返回所有的子元素节点。他只返回元素节点，其余节点不返回(这个是重点掌握的)
+        console.log(nodes.children);
+
+    </script>
+</body>
+</html>

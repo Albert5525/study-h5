@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选反选</title>
+    <style>
+        .product {
+            width: 400px;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 14px;
+            font-size: 14px;
+            border-collapse: collapse;
+        }
+
+        .product th {
+            background-color: cadetblue;
+        }
+
+        .product td {
+            background-color: #EDEFEC;
+        }
+
+        .product tr, .product td, .product th {
+            border: 1px solid #ccc;
+
+        }
+    </style>
+</head>
+<body>
+    <table class="product">
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="check_all">
+            </th>
+            <th>
+                商品
+            </th>
+            <th>
+                价钱
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                iPhone13
+            </td>
+            <td>
+                8000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                iPad Pro
+            </td>
+            <td>
+                5000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                iPad Air
+            </td>
+            <td>
+                2000
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>
+                Apple Watch
+            </td>
+            <td>
+                2000
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <script>
+        var check_all = document.getElementById("check_all");
+        var cbs = document.querySelector("tbody").querySelectorAll("input");
+        check_all.onclick = function () {
+            for (var i = 0; i < cbs.length; i++) {
+                cbs[i].checked = this.checked;
+            }
+        }
+        for (var j = 0; j < cbs.length; j++) {
+            cbs[j].onclick = function () {
+                var count=0;
+                for (let i = 0; i < cbs.length; i++) {
+                    if (cbs[i].checked)
+                        count++;
+                }
+                if (count==cbs.length){
+                    check_all.checked=true;
+                }else {
+                    check_all.checked=false;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

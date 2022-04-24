@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval定时器</title>
+</head>
+<body>
+    <script>
+        /*
+        * setInterval()和setTimeout()的区别
+        * setTimeout() 延时时间到了就去执行回调函数只执行一次，执行后结束了这个定时器。
+        * setInterval() 延时时间到了就去执行回调函数，注意是循环执行
+        * */
+        var num=0;
+        setInterval(printNum,1000);
+        function printNum() {
+            console.log(num);
+            num++;
+        }
+    </script>
+</body>
+</html>

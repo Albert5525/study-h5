@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点操作</title>
+</head>
+<style>
+    #timeBtn {
+        display: block;
+        background-color: red;
+        color: #fff;
+        border: none;
+        margin: 0 auto;
+    }
+    
+    div {
+        width: 300px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        background-color: pink;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <button id="timeBtn">显示当前时间</button>
+    <div id="time">某个时间</div>
+    <script>
+        var timeBtn = document.getElementById('timeBtn');
+        timeBtn.onclick = function() {
+            var date = new Date();
+            document.querySelector("#time").innerText = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDay();
+        }
+    </script>
+</body>
+
+</html>

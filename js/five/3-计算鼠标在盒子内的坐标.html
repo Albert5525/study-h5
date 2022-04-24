@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算鼠标在盒子内的坐标</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var father = document.querySelector('.father');
+            console.log(father);
+            father.onmousemove=function (e) {
+                console.log(e.pageX - father.offsetLeft);
+                console.log(e.pageY - father.offsetTop);
+                father.innerHTML="X的坐标为："+(e.pageX - father.offsetLeft)+",Y的坐标为："+(e.pageY - father.offsetTop);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="father"></div>
+</body>
+</html>

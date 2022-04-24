@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>我是div</div>
+    <script>
+        // 1.创建元素节点
+        var span = document.createElement("span");
+        span.innerHTML = "我是创建出来的";
+        var div = document.querySelector("div");
+        //天假节点  node.appendChild(child)
+        //node.appendChild()方法将一个节点添加到指定父节点的子节点列表的末尾。类似于css里面的after伪元素。
+        //还可以node.insertBefore(child，指定元素)。表示在指定元素的前面天假child
+        div.appendChild(span);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度换肤效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(../images/1.jpg) no-repeat center top;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+
+        .baidu img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="baidu">
+        <li><img src="../images/1.jpg"></li>
+        <li><img src="../images/2.jpg"></li>
+        <li><img src="../images/3.jpg"></li>
+        <li><img src="../images/4.jpg"></li>
+    </ul>
+    <script>
+        /*
+        * 案例分析
+        * 1 这个案例是给一组元素注册事件
+        * 2 给4个小图利用循环注册点击事件
+        * 3 当我们点击了这个图片让我们页面背景改为当前的图片
+        * 4 核心算法  把当前图片的src路径娶过来 给body作为背景即可
+        * */
+        var body = document.querySelector("body");
+        var baidu = document.querySelector(".baidu");
+        var lis = baidu.getElementsByTagName("li");
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onclick = function () {
+                // 注意这里在选取img标签是不能使用lis[i]，原因是，在我们lis[i]在事件函数中是不存在的，
+                // lis[i]只在遍历lis的时候生效，在事件函数中不生效。
+                body.style.background = "url(" + (this.querySelector("img")).src + ") no-repeat center top";
+            }
+        }
+    </script>
+</body>
+</html>
