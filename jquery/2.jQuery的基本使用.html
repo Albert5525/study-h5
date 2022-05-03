@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.jQuery的基本使用</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        /*
+            jQuery的入口函数
+            //第一种
+            $(document).ready(function () {
+                $("div").hide();
+            });
+
+            //第二种
+            $(function () {
+                $("div").hide();
+            });
+            1.等着DOM结构渲染完毕即可执行内部代码，不必等到所有外部资源加载完成，jQuery帮我们完成了封装。
+            2.相当于原生js中的DOMContentLoaded。
+            3.不同于原生js中的load事件是等页面文档，外部的js文件，css文件，图片加载完毕才执行内部代码。
+        */
+        $(document).ready(function () {
+            $("div").hide();
+        });
+        $(function () {
+            $("div").hide();
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

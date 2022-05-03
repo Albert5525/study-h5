@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-jQuuery基础选择器</title>
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        /*
+        * 原生js获取元素方式很多，很杂，并且兼容性情况不一致，因此jQuery给我们做了封装，使获取元素统一标准
+        *   $("选择器")    //里面选择器直接写CSS选择器集合，但是要加引号
+        *
+        * 名称                    用法                  描述
+        * ID选择器                 $("#id")            获取指定ID的元素
+        * 全选选择器                 $('*')              匹配所有元素
+        * 类选择器                  $(".class")         获取同一类class的标签
+        * 并集选择器                 $(" div,p,li")      获取多个元素
+        * 交集选择器                 $("li.current")     交集选择器
+        * 标签选择器                 $("标签名")           获取同一类标签的所有元素
+        * 子代选择器                 $("ul>li")          使用>号，获取亲儿子层级的元素，注意，并不会获取孙子层级的元素
+        * 后代选择器                 $("ul li")           使用空格，代表后代选择器，获取ul下的所有li元素，包括孙子等
+        * */
+        $(function () {
+            console.log($(".nav"));
+            console.log($("div"));
+
+            console.log($("ul li"));
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">我是nav div</div>
+    <div>我是div</div>
+    <p>我是p标签</p>
+    <ol>
+        <li>我是 ol的</li>
+        <li>我是 ol的</li>
+        <li>我是 ol的</li>
+        <li>我是 ol的</li>
+    </ol>
+
+    <ul>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+        <li>我是ul 的</li>
+    </ul>
+</body>
+</html>
