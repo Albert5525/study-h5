@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-jQuery自定义动画</title>
+    <style>
+        div {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            top: 0;
+            background-color: pink;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+
+        /*
+        *   自定义动画
+        *   语法：
+        *       animate(params,[speed],[easing],[fn])
+        *   参数：
+        *       1.params：想要改变的样式属性，一对象形式传递，必须写，属性名可以不带引号，如果是符合属性则需要采取驼峰命名法borderLeft。其余参数都可以省略
+        *       2.speed：三种预定的速度之一的字符串("slow","normal","fast")或者表示动画时长的毫秒数值(如：1000)。
+        *       3.easing:(Optional)用来指定切换效果，默认是"swing",可用参数"linear"
+        *       4.fn:回答函数，在动画完成是执行的函数，每个函数都执行一次
+        *
+        * */
+        $(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: 600,
+                    top: 300,
+                    opacity: .4,
+                    width: 500
+                }, 2000, function () {
+                    alert("ok");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>动起来</button>
+    <div></div>
+</body>
+</html>

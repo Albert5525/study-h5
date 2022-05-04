@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-jQuery筛选方法下</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            // siblings(selector)  $(".first").siblings("li");     查找兄弟节点，不包括自己本身
+           $("ol .item").siblings("li").css("color","red");
+
+            // hasClass(class)     $("div").hasClass("protected")  检查当前的元素是否包含有某个特定的类，如果有，则返回true
+           console.log($("ol li").hasClass("item"));
+
+            // eq(index)           $("li").eq(2);                  相当于$("li:eq(2)")，index从0开始
+            $("ul li:eq(2)").css("color","red");
+            $("ul li").eq(3).css("background","blue").css("color","red");
+        });
+    </script>
+</head>
+<body>
+    <ol>
+        <li>我是ol 中的li</li>
+        <li>我是ol 中的li</li>
+        <li class="item">我是ol 中的li</li>
+        <li>我是ol 中的li</li>
+        <li>我是ol 中的li</li>
+        <li>我是ol 中的li</li>
+    </ol>
+    <ul>
+        <li>我是ul 中的li</li>
+        <li>我是ul 中的li</li>
+        <li>我是ul 中的li</li>
+        <li>我是ul 中的li</li>
+        <li>我是ul 中的li</li>
+        <li>我是ul 中的li</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17-突出显示</title>
+    <style>
+        /* 清除浮动代码start */
+        .clearfix:before,
+        .clearfix:after{
+            content:"";
+            display: table;
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;
+        }
+        /* 清除浮动代码end */
+        body{
+            height: 100%;
+            background-color: #000000;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .wrapper{
+            width: 630px;
+            padding: 10px 0 0 10px;
+            margin: 100px auto;
+            border: 2px solid white;
+        }
+
+        .wrapper ul li{
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("ul>li").hover(function () {
+                $(this).siblings("li").stop().fadeTo("fast",0.5);
+            },function () {
+                $(this).siblings("li").stop().fadeTo("fast",1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper clearfix">
+        <ul>
+            <li><a href="#"><img src="img/01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/03.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/04.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/05.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/06.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16-jQuery淡入淡出效果</title>
+    <style>
+        div{
+            width: 200px;
+            height: 600px;
+            background-color: pink;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   淡入淡出效果
+        *   渐进方式调整到指定的不透明度
+        *       fadeTo([[speed],opacity,[easing],[fn]])
+        *   效果参数
+        *       1.opacity透明度必须写，取值0~1之间
+        *       2.speed：三种预定速度之的字符串("slow","normal",or "fast")或标示动画市场的毫秒数值(如：1000)，必须写
+        *       3.easing:(Optional)用来指定切换效果，默认是"swing",可用参数"linear"
+        *
+        * */
+        $(function () {
+            $("button").eq(0).click(function () {
+                $("div").fadeIn(1000);
+            });
+            $("button").eq(1).click(function () {
+                $("div").fadeOut(1000);
+            });
+            $("button").eq(2).click(function () {
+                $("div").fadeToggle(3000);
+            });
+            $("button").eq(3).click(function () {
+                $("div").fadeTo(1000,0.3);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>淡入</button>
+    <button>淡出</button>
+    <button>切换</button>
+    <button>fadeTo</button>
+    <div></div>
+</body>
+</html>
