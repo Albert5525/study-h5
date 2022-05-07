@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-this指向问题</title>
+    <script>
+        /*
+        *   函数体内this的指向
+        *   这些this的指向，适当我们调用函数的时候确定的，调用方式的不同决定了this的指向不同一般指向我们的调用者
+        *
+        *   调用方式                        this指向
+        *   普通函数调用                      window
+        *   构造函数调用                      实例对象，原型对象里面的方法也指向实例对象
+        *   对象方法调用                      该方法所属对象
+        *   事件绑定方法                      绑定事件对象
+        *   定时器函数                       window
+        *   立即执行函数                      window
+        *
+        *
+        * 改变函数内部this指向
+        *   javaScript提供了一下函数方法来帮我们更优雅的处理函数内部this的指向问题，常用的有bind(),call(),apply()三种方式
+        * 1.call方法
+        *       call方法调动一个对象。简单理解为调用函数的方式，但是他可以改变函数的this指向
+        *       主要作用是用来继承构造函数
+        *   fun.call(thisArg,arg1,arg2...);
+        * 2.apply方法
+        *   apply()方法调用一个函数。简单理解为调用函数的方式，但是他可以改变函数的this指向
+        *   fun.apply(thisArg,[argsArray])
+        * thisArg:在函数运行时指定的this值
+        * argsArray：传递的值，必须包含在数组里面
+        * 返回值就是函数的返回值，因为他就是调用函数
+        *
+        * 3.bind方法
+        *   bind()方法不会调用函数，但是能改变函数内部this指向
+        *   fun.bind(thisArg,arg1,arg2,...)
+        * thisArg：在fun函数运行时指定的this值
+        * arg1,arg2:传递的其他参数
+        * 返回指定的this值和初始化参数改造的原函数拷贝。
+        * 如果有的函数我们不需要立即调用，但是又想改变这个函数内部的this指向此时用bind
+        * 例如我们有一个按钮，当我们点击了之后，就近用这个按钮，3s之后开启这个按钮
+        *
+        *
+        *
+        * ==============================================================================================================
+        * call(),apply,bind()总结
+        * 相同点：都可以改变函数内部的this指向
+        * 区别点：
+        *   1.call和apply会调用函数，并且改变函数内部的this指向
+        *   2.call和apply传递的参数不一样
+        *       fn.call(thisArg,arg1,arg2,...),fn.apply(thisArg,[arg1,arg2,...arg3]);
+        *   3.bind不会调用函数，可以改变函数内部this指向
+        * 主要应用场景
+        * 1.call经常做继承
+        * 2.apply经常跟数组有关系，比如借助于数学对象实现数组最大值最小值
+        * 3.bind不调用函数，但是还想改变this指向，比如改变定时器内部的this指向
+        *
+        *
+        * */
+        window.addEventListener("load", function () {
+            var o = {
+                name: "andy"
+            }
+
+            function max(...arr) {
+                var temp = arr[0];
+                for (let i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        temp = arr[i];
+                    } else {
+                        temp = arr[i + 1];
+                    }
+                }
+                return temp;
+            }
+
+            console.log("max.apply(o, [12, 2, 3, 3, 99])=====" + max.apply(o, [12, 2, 3, 3, 99]));
+            console.log("=============" + max([12, 2, 3, 3, 99]));
+            //apply的主要应用 比如可以利用apply借助于数学内置对象求最大值
+            console.log(Math.max.apply(Math, [12, 2, 3, 3, 99]));
+
+
+            /*            var btn = document.querySelector("button");
+                        btn.onclick = function () {
+                            this.disabled = true;//这个this指向的是btn这个按钮
+                            // var that=this;//声明that变量保存this
+                            setInterval(function () {
+                                // that.disabled=false;//that指向的是btn按钮
+                                this.disabled = false;//定时器函数里面的this指向的是window
+                            }.bind(this), 3000);//这里用bind函数改变了定时器里面的this指向，是定时器里面的this指向了btn
+                        }*/
+
+
+            var btns = document.querySelectorAll("button");
+            btns.forEach(function (value, index, arr) {
+                value.addEventListener("click", function () {
+                    this.disabled = true;
+                    setInterval(function () {
+                        this.disabled = false;
+                    }.bind(this), 2000);
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <button>点击1</button>
+    <button>点击2</button>
+    <button>点击3</button>
+    <button>点击4</button>
+    <button>点击5</button>
+</body>
+</html>

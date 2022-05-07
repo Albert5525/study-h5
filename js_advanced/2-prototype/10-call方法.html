@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-call方法</title>
+    <script>
+        /*
+        *   ES6之前没有给我们提供extends继承，我们可以通过构造函数+原型对象模拟实现继承，被称为组合继承。
+        *
+        *
+        *   call()可以调用函数
+        *   call()可以修改this的指向,使用call()的时候 参数一是修改后的this指向,参数2,参数3..使用逗号隔开连接
+        *   调用这个函数，并且修改函数运行时的this指向
+        *   fun.call(thisArg,arg1,arg2,...)
+        *   thisArg:当前调用函数this的指向对象
+        *   arg1，arg2：传递的其他参数
+        *
+        * */
+
+        // call 方法
+        function fn(x, y) {
+            console.log('我想喝手磨咖啡');
+            console.log(this);
+            console.log(x + y);
+
+
+        }
+        var o = {
+            name: 'andy'
+        };
+        // fn();
+        // 1. call() 可以调用函数
+        // fn.call();
+        // 2. call() 可以改变这个函数的this指向 此时这个函数的this 就指向了o这个对象
+        fn.call(o, 1, 2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
