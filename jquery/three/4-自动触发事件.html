@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-自动触发事件</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   自动触发事件 trigger()
+        *   有些事件希望自动触发，比如伦比图自动播放功能跟点击右侧按钮一致。可以利用定时器自动触发右侧按钮点击事件，不必鼠标点击触发。
+        *
+        *   element.click() //第一种简写形式
+        *   element.trigger(type)//第二种形式
+        *   element.triggerHandler("事件")就是不会触发元素的默认行为
+        *
+        * */
+        $(function () {
+            $("div").on("click", function () {
+                $(this).css("background", "red");
+            });
+
+            //自动触发事件 element.click();
+            $("div").click();
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

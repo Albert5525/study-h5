@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-jQuery事件处理on</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .current{
+            background-color: green;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery事件注册
+        *   1.单个事件注册
+        *       语法：
+        *           element.事件(function(){})
+        *           $("div").click(function(){事件处理程序});
+        *   其他事件和原生基本一致
+        *   比如mouseover  mouseout  blur  focus  change  keydown  keyup  resize  scroll等
+        *
+        *
+        *   2.事件处理on()绑定事件
+        *   on()方法在匹配元素上绑定一个或多个事件的处理函数
+        *   语法： element.on(events,[selector],fn)
+        *       1.events:一个或多个用空格分割的事件类型，如“click”，“keydown”
+        *       2.selector：元素的子元素选择器
+        *       3.fn：回调函数 即绑定在元素升上的侦听函数。
+        *   2.1 on()方法优势2：
+        *       可以事件委派操作，事件委派的定义就是，把原来嫁给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。
+        *       $("ul").on("click","li",function(){});
+        *   2.1 on()方法优势3：
+        *       动态创建的元素，click()方法绑定事件，on()可以给动态生成的元素绑定事件
+        *
+        * */
+        $(function () {
+            //单个事件注册
+            // $("div").click(function () {
+            //     $(this).css("background","red");
+            // });
+            // $("div").mouseenter(function () {
+            //     $(this).css("background","skyblue");
+            // });
+
+            //    事件处理on
+            // $("div").on(
+            //     {
+            //         click:function () {
+            //             $(this).css("background","red");
+            //         },
+            //         mouseenter: function () {
+            //             $(this).css("background","skyblue");
+            //         },
+            //         mouseleave: function () {
+            //             $(this).css("background","blue");
+            //         }
+            //     }
+            // );
+
+            $("div").on("mouseenter mouseleave",function () {
+                $(this).toggleClass("current");
+            });
+
+            //    事件处理on 可以事件委派
+            $("ul").on("click","li",function () {
+                //,click事件是绑定在ul上面的，但是 触发事件的对象是ul里面的li，所以这里$(this)就是触发事件的元素
+                alert($(this).html());
+            });
+
+            //    事件处理on 可以给动态生成的元素绑定事件
+            $("ol").on("click","li",function () {
+                alert($(this).html());
+            });
+            $("ol").append("<li>后来添加的</li>");
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+    <ul>
+        <li>他们都是好孩子1</li>
+        <li>他们都是好孩子2</li>
+        <li>他们都是好孩子3</li>
+        <li>他们都是好孩子4</li>
+        <li>他们都是好孩子5</li>
+        <li>他们都是好孩子6</li>
+    </ul>
+    <ol></ol>
+</body>
+</html>
