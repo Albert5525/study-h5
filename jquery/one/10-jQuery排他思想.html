@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-jQuery排他思想</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                $("button").css("color","#2b2b2b").css("background","");
+                $(this).css("color","red").css("background","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+</body>
+</html>

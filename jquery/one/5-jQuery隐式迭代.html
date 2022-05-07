@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5-jQuery隐式迭代</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery的隐士迭代：遍历颞部DOM元素(伪元素形式存储)的过程就叫做隐士迭代
+        *   简单理解：给匹配到的所有元素进行循环遍历，执行相应的方法，而不用我们在进行循环遍历，简化我们的操作，方便我们调用
+        * */
+        $(function () {
+            //获取四个div元素
+            console.log($("div"));
+            //jQuery设置样式。$("选择器").css(属性名，属性值)；这样做会把选择所选择道的所有元素的属性值都改变，这个属性叫做jQuery的隐士迭代
+            //jQuery的隐士迭代就是把所有匹配到的元素内部进行循环遍历，给每一个元素添加css这个方法
+            //给四个div设置背景颜色为粉色
+            $("div").css("background","pink");
+            $("li").css("color","red");
+        })
+    </script>
+</head>
+<body>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <div>惊喜不，意外不</div>
+    <ul>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+        <li>相同的操作</li>
+    </ul>
+</body>
+</html>

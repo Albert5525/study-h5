@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-jQuery对象拷贝</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery对象拷贝
+        *   如果想要把某个对象拷贝(合并)给另一个对象使用，此时可以使用$.extend()方法
+        *   语法：
+        *       $.extend([deep],target,object1,[objectN])
+        *       1.deep:如果设为true为深拷贝，默认为false浅拷贝
+        *       2.target：要拷贝的目标对象
+        *       3.object1：待拷贝到第一个对象的对象
+        * */
+        $(function () {
+            var zhangsan = {
+                id: 1,
+                name: "zhangsan"
+            };
+            var lisi = {
+                id: 2,
+                name: "lisi"
+            };
+            var wangwu = {
+                id: 2,
+                name: "wangwu"
+            };
+            var target={};
+            var target2={
+                age:18
+            };
+            $.extend(true,target,[zhangsan,wangwu]);
+            $.extend(true,target2,[zhangsan,wangwu]);
+            console.log(target);
+            console.log(target2);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

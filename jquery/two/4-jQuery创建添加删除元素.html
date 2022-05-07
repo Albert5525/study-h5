@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-jQuery创建添加删除元素</title>
+    <style>
+        ul{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   添加元素
+        *   (1).内部添加
+        *       element.append("内容")
+        *   把内容放入到匹配元素的内部的最后面，类似于原生的node.appendChild(childEle);
+        *
+        *   (2).外部添加
+        *       element.after("内容") //那内容放入目标元素后面
+        *       element.before("内容")//把内容放入目标元素前面
+        *   内部添加元素是父子关系
+        *   外部添加元素是兄弟关系
+        *
+        *
+        *   (3).删除元素
+        *       element.remove()    //删除匹配的元素(本身)
+        *       element.empty()     //删除匹配的元素集合中所有的子节点
+        *       element。html("")    //清空匹配的元素内容
+        *
+        * */
+
+        $(function () {
+            var li="<li>我是第二个，我是创建出来的li</li>"
+
+
+            //====================内部添加=====================
+            //$(selector).append(ele)是在$(selector)的内部添加元素并且添加在最后面
+            // $("ul").append(li);
+
+            //$(selector).prepend(ele)是在$(selector)的内部添加元素并且添加在最前面，相当于原生node.insertBefore(要插入的元素, 在哪个元素的前面插入);
+            $("ul").prepend(li);
+
+
+            //====================外部添加=====================
+            $("ul").after("<div>我是ul后面添加的div</div>");
+            $("ul").before("<div>我是ul前面添加的div</div>");
+
+
+            //====================删除元素=====================
+            // $("ul").remove();//删除匹配的元素  自杀
+            $("ul").empty()     //删除匹配的元素集合中所有的子节点  不包括自身
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>我是第一个</li>
+        <li>我是第二个</li>
+    </ul>
+</body>
+</html>

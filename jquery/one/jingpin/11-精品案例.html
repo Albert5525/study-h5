@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-精品案例</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        .wrapper {
+            position: relative;
+            top: 100px;
+
+
+            width: 250px;
+            height: 248px;
+            margin: 100px auto 0;
+            border: 1px solid pink;
+            border-right: 0;
+            overflow: hidden;
+        }
+
+        #left,
+        #content {
+            float: left;
+        }
+
+        #left li {
+            background: url(img/lili.jpg) repeat-x;
+        }
+
+        #left li a {
+            display: block;
+            width: 48px;
+            height: 27px;
+            border-bottom: 1px solid pink;
+            line-height: 27px;
+            text-align: center;
+            color: black;
+        }
+
+        #left li a:hover {
+            background-image: url(img/abg.gif);
+        }
+
+        #content {
+            position: relative;
+            border-left: 1px solid pink;
+            border-right: 1px solid pink;
+        }
+
+        .content div {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+
+        .content .current {
+            display: block;
+        }
+    </style>
+    <script src="../../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $("#left li").click(function () {
+                // $(this).index()拿到当前元素在jQuery对象位数组中的下标值
+                console.log($(this).index());
+                // $(".content div").css("display","none");
+                // $(".content div").removeClass("current");
+                // $(".content div").eq($(this).index()).css("display","block");
+                // $(".content div").eq($(this).index()).addClass("current");
+
+                $(".content div").eq($(this).index()).show();
+                $(".content div").eq($(this).index()).siblings("div").hide();
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul id="left">
+            <li><a href="#">女靴</a></li>
+            <li><a href="#">雪地靴</a></li>
+            <li><a href="#">冬裙</a></li>
+            <li><a href="#">皮大衣</a></li>
+            <li><a href="#">毛衣</a></li>
+            <li><a href="#">棉服</a></li>
+            <li><a href="#">女裤</a></li>
+            <li><a href="#">羽绒服</a></li>
+            <li><a href="#">牛仔裤</a></li>
+        </ul>
+        <div class="content">
+            <div class="current">
+                <a href="#"><img src="img/女靴.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/雪地靴.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/冬裙.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/呢大衣.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/毛衣.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/棉服.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/女裤.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/羽绒服.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/牛仔裤.jpg" alt=""></a>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

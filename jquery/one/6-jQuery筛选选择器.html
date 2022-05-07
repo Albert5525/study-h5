@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-jQuery筛选选择器</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery筛选选择器
+        *   语法              用法                  描述
+        *   :first          $("li:first")       获取第一个li元素
+        *   :last           $("li:last")        获取最后一个li元素
+        *   :eq(index)      $("li:eq(2)")       获取到的li元素中，选择索引号为2的元素，索引号index从0开始
+        *   :odd            $("li:odd")         获取到的li元素中，选择索引号为奇数的元素
+        *   :even           $("li:even")        获取到的li元素中，选择索引号为偶数的元素
+        * */
+
+        $(function () {
+            $("ul li:odd").css("color","red");
+            $("ul li:even").css("color","green");
+            $("ul li:first").css("font-size","20px");
+            $("ul li:last").css("font-size","20px").css("background","pink");
+
+            $("ol li:eq(2)").css("color","yellow");
+
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+    </ul>
+    <ol>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-jQuery筛选方法</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery筛选方法
+        *   语法                  用法                          说明
+        *   parent()            $("li").parent();               查找父级(最近一级的父亲，亲父亲)
+        *   children(selector)  $("ul").children("li")          相当于$("ul>li"),最近一级(亲儿子)
+        *   find(selector)      $("ul").find("li");             相当于$("ul li"),后代选择器
+        *   siblings(selector)  $(".first").siblings("li");     查找兄弟节点，不包括自己本身
+        *   nextAll([expr])     $(".first").nextAll()           查找当前元素之后所有的同辈元素
+        *   prevAll([expr])     $(".last").prevAll()            查找当前元素之前所有的同辈元素
+        *   hasClass(class)     $("div").hasClass("protected")  检查当前的元素是否包含有某个特定的类，如果有，则返回true
+        *   eq(index)           $("li").eq(2);                  相当于$("li:eq(2)")，index从0开始
+        *
+        *   常用的重要的有：parent(),children(),find(),siblings(),eq();
+        * */
+
+        $(function () {
+            //parent()            $("li").parent();               查找父级(最近一级的父亲，亲父亲)
+            $(".son").css("color", "#fbfbfb");
+            $(".son").parent().css("background", "red");
+
+            //children(selector)  $("ul").children("li")          相当于$("ul>li"),最近一级(亲儿子)
+            $(".nav").children("p").css("color","pink");
+
+            //siblings(selector)  $(".first").siblings("li");     查找兄弟节点，不包括自己本身
+            $(".nav").children("p").siblings("div").css("background","blue").css("width","100px");
+            $(".nav").find("p").css("color","yellow");
+        });
+    </script>
+</head>
+<body>
+    <div class="yeye">爷爷
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>我是p</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+</body>
+</html>

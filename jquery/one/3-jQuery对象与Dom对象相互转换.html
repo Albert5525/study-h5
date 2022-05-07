@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-jQuery对象与Dom对象相互转换</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            /*
+            * DOM对象与jQuery对象之间是可以相互转换的
+            *
+            * 因为原生js比jQuery更大，原生的一些属性和方法jQuery没有给我们封装，要想使用这些属性和方法需要把jQuery对象转换为DOM对象才能使用
+            *
+            * 1.DOM对象转换为jQuery对象：$(DOM对象)
+            *
+            *
+            * 2.jQuery对象转换为DOM对象
+            *   $('div')[index]  index是索引号
+            *   $('div').get(index)  index是索引号
+            *
+            *
+            * */
+            var video = document.querySelector("video");//这种获得的对象是DOM对象
+            //转换为jQuery对象直接$(DOM对象)即可
+            // $(video).hide();
+
+            $('video')[0].play();
+            $('video').get(0).play();
+        });
+    </script>
+</head>
+<body>
+
+</body>
+<video src="https://vd2.bdstatic.com/mda-ne2gb0tw522yrihe/cae_h264_delogo/1651577762679949373/mda-ne2gb0tw522yrihe.mp4?v_from_s=hkapp-haokan-suzhou&auth_key=1651586841-0-0-b45a798050b311d2e49cabb184d2835e&bcevod_channel=searchbox_feed&pd=1&cd=0&pt=3&logid=2241326722&vid=13899432048781445416&abtest=100815_1-101454_4-101830_1-17451_2-3000222_2&klogid=2241326722" controls="controls" autoplay="autoplay" muted></video>
+</html>

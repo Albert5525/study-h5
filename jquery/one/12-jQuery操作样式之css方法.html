@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-jQuery操作样式之css方法</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        /*
+        *       操作css方法
+        *       jQuery可以使用css方法来修改简单元素样式；也可以操作类，修改多个样式
+        *
+        *       1、属性致谢属性名，则是返回属性值
+        *       $(this).css("color");
+        *
+        *       2.参数是属性名，属性值，逗号分隔，是设置一组样式，属性必须加引号，值如果是数字可以不用跟单位和引号
+        *       $(this).css("color","red");
+        *
+        *       3.参数可以是对象形式，方便设置多组样式。属性名和属性值用冒号分开，属性可以不用加引号
+        *       $(this).css({"color":"red","font-size":"16px"});
+        *       $(this).css({
+        *                       color:red,
+        *                       font-size:16px
+        *                   });
+        *
+        *
+        *
+        *       设置类样式方法
+        *       作用等同于以前的classList，可以操作类样式，注意操作类里面的参数不要加点
+        *       1.添加类
+        *           $("div").addClass("current");
+        *       2.移除类
+        *           $("div").removeClass("current");
+        *       3.切换类
+        *           $("div").toggleClass("current");如果div上有current这个类，则移除，如果没有则添加current这个类
+        *
+        * */
+        $(function () {
+            //jQuery.css()方法，如果只写了属性名没有写属性值则返回该属性名的值，如果都写了则修改该属性名的值
+            var width = $("div").css("width");
+            console.log(width);
+
+            $("div").css({
+                width: 400,
+                height:400,
+                backgroundColor:"red"
+            });
+        });
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

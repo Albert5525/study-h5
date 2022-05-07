@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-jQuery属性操作</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   (一)设置或获取元素固有属性值prop()
+        *   所谓元素固有属性就是元素本身自带的属性，比如<a>元素里面的href，比如<input>元素里面的type
+        *   1.获取属性值语法
+        *       prop("属性")
+        *   设置属性语法
+        *       prop("属性","属性值")
+        *
+        *   (二)设置或获取元素自定义属性值attr()
+        *   用户自己给元素添加的属性，我们成为自定义属性，比如给div添加index="1"；
+        *   1.获取属性语法
+        *       attr("属性")//类似原生getAttribute()
+        *   2.设置属性语法
+        *       attr("属性","属性值")//类似原生setAttribute()
+        *
+        *   (三)数据缓存data()
+        *   data()方法可以在指定的元素上存取数据，并不会修改DOM元素结构。一旦页面刷新，之前存放的数据都将被移走
+        *   1.附加数据语法
+        *     data("name","value")//向被选元素附加数据
+        *   2.获取数据语法
+        *       data("name")//向被选元素获取数据
+        *   同时，还可以读取HTML5自定义属性data-index，得到的是数字型
+        *
+        *
+        * */
+        $(function () {
+            console.log($("a").prop("href"));
+            $("div").attr("index","2");
+            console.log($("div").attr("index"));
+
+            //数据缓存data()这个里面的数据是存放在元素的内存里面
+            $("span").data("uname","albert");
+            console.log($("span").data("uname"));
+        });
+
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com">baidu</a>
+    <div index="1"></div>
+    <span>哈哈</span>
+</body>
+</html>

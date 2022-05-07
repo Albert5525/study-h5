@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-jQuery多库共存</title>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        /*
+        *   jQuery多库共存
+        *   问题描述：jQuery使用$作为标识符，随着jQuery的流行，其他js库也会用这个$作为标识符，这样一起使用会引起冲突
+        *   客观需求：需要一个解决方案，让jQuery和其他js库不存在冲突，可以同时存在，这就叫做多库共存
+        *
+        *   jQuery解决方案：
+        *       1.把里面的$符号 同意改为jQuery。比如jQuery("div")
+        *       2.jQuery变量规定新的名称：$.noConflict()  var xx=$.noConflict().
+        *
+        * */
+        $(function () {
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

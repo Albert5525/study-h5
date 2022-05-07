@@ -34,7 +34,7 @@
         *   事件冒泡本身的特性 会带来坏处  也会带来好处  需要我们灵活掌握 生活中有如下场景
         *       一个班级有100个学生  快递员有100个快递 如果一个个的送花费的时间较长  同时每个学生领取的时候  也需要排队领取，花费的时间也较长
         *   解决方案：
-        *       快递员吧100个快递 委托 给班主任  班主任把这些快递放到办公室，同学蟹壳自行领取即可
+        *       快递员把100个快递 委托 给班主任  班主任把这些快递放到办公室，同学下课自行领取即可
         *   优势：快递员说省事，委托给班主任就可以走了，同学领取也方便，因为相信班主任。
         *
         *
@@ -54,7 +54,7 @@
         ul.addEventListener("click", function (e) {
             alert(e.target.innerHTML);
             for (let i = 0; i < this.children.length; i++) {
-                this.children[i].style.backgroundColor = '#fff';
+                this.children[i].style.backgroundColor = 'red';
             }
             e.target.style.backgroundColor = 'pink';
         });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-微博发布效果</title>
+    <style>
+        li {
+            list-style: none;
+            border-bottom: 1px dashed red;
+        }
+
+        ul li a {
+            float: right;
+        }
+
+        .box {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid red;
+            margin: 100px auto;
+        }
+
+    </style>
+    <script src="../jquery-3.6.0.js"></script>
+    <script>
+        $(function () {
+            $(".btn").click(function () {
+                //获取文本域中的内容 给ul添加内容
+                $("ul").prepend("<li>" + $(".txt").val() + "\t\t<a href='javascript:;'>delete</a>" + "</li>");
+            });
+            $("ul").on("click", "li a", function () {
+                $(this).parent().slideUp("normal", "linear",function () {
+                    $(this).remove();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box" id="weibo">
+        <span>微博发布</span>
+        <textarea name="" class="txt" cols="30" rows="10"></textarea>
+        <button class="btn">发布</button>
+        <ul>
+
+        </ul>
+    </div>
+</body>
+</html>
