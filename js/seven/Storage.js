@@ -5,14 +5,14 @@ window.addEventListener("load", function () {
     *
     * 本地存储特性
     * 1.数据存储在用户浏览器中
-    * 2.设置，获取方便，甚至页面刷新不丢失数据
+    * 2-prototype.设置，获取方便，甚至页面刷新不丢失数据
     * 3.容量较大，sessionStorage越5M，localStorage越20M
     * 4.只能存储字符串，可以将对象JSON.stringify()编码后存储
     *
     *
     * 1)window.sessionStorage
     *   1.生命周期为关闭浏览器窗口
-    *   2.在同一个窗口(页面)下数据可以共享
+    *   2-prototype.在同一个窗口(页面)下数据可以共享
     *   3.以键值对的形式存储使用
     * 存储数据：
     *   sessionStorage.setItem(key,value);
@@ -23,9 +23,9 @@ window.addEventListener("load", function () {
     * 删除所有数据：
     *   sessionStorage.clear()
     *
-    * 2)window.localStorage
+    * 2-prototype)window.localStorage
     *   1.生命周期永久生效，除非手动关闭，否则关闭页面后也会存在
-    *   2.可以多窗口(页面)共享(同一个浏览器可以共享)
+    *   2-prototype.可以多窗口(页面)共享(同一个浏览器可以共享)
     *   3.以键值对的形式存储使用
     * 存储数据：
     *   localStorage.setItem(key,val)

@@ -243,14 +243,14 @@ nav a span {
 }
 
 
-/* .news a:nth-child(2),
+/* .news a:nth-child(2-prototype),
 .news a:nth-child(3),
 {
     width: 25%;
 } */
 
 
-/* n+2 就是从从2个往后面选 */
+/* n+2-prototype 就是从从2个往后面选 */
 
 .news a:nth-child(n+2) {
     width: 25%;

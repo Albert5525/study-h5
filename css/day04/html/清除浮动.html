@@ -10,7 +10,7 @@
         /* 
             什么时候清除浮动？
                 1.父级没有高度
-                2.子盒子浮动了
+                2-prototype.子盒子浮动了
                 3.影响下面布局了
          */
 
@@ -41,7 +41,7 @@
         .father {
             border: 5px solid red;
             /* 
-                2.父级元素添加overflow属性方法
+                2-prototype.父级元素添加overflow属性方法
                     可以给父级添加：overflow为 hidden | auto | scroll 都可以实现
                 优点：代码简洁。
                 缺点：内容增多时候容易造成不会自动换行导致内容被隐蔽掉，无法显示需要溢出的元素。

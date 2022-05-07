@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-原型链成员查找规则</title>
+    <script>
+        /*
+        * 任何对象都有原型对象,也就是prototype属性,任何原型对象也是一个对象,该对象就有__proto__属性,这样一层一层往上找,就形成了一条链,我们称此为原型链;
+        * 1.当访问一个对象的属性（包括方法）时，首先查找这个对象自身有没有该属性。
+        * 2.如果没有就查找它的原型（也就是 __proto__指向的 prototype 原型对象）。
+        * 3.如果还没有就查找原型对象的原型（Object的原型对象）。
+        * 4.依此类推一直找到 Object 为止（null）。
+        * 5.__proto__对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线。
+        * */
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        Star.prototype.sing = function() {
+            console.log('我会唱歌');
+
+        }
+        Star.prototype.sex = '女';
+        // Object.prototype.sex = '男';
+        var ldh = new Star('刘德华', 18);
+        ldh.sex = '男';
+        console.log(ldh.sex);
+        console.log(Object.prototype);
+        console.log(ldh);
+        console.log(Star.prototype);
+        console.log(ldh.toString());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

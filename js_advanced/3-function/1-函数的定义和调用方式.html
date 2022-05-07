@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1-函数的定义和调用方式</title>
+    <script>
+        /*
+        *   函数的定义方式
+        *   1.函数声明方式function关键字(命名函数)
+        *   2.函数表达式(匿名函数)
+        *   3.new Function('参数1','参数2'...'函数体')
+        *   Function里面参数都必须是字符串格式
+        *   第三种方式执行效率低，也不方便书写，因此较少使用
+        *   所有函数都是Function的实例(对象)
+        *   函数也属于对象
+        *
+        * */
+        window.addEventListener("load",function () {
+            //函数的定义方式
+            //1.自定义函数(命名函数)
+            function f() {
+
+            }
+            //2.函数表达式
+            var fun=function () {
+
+            }
+
+            //3.利用 new Function('参数1','参数2','函数体')；
+            var fn=new Function('a','b','c','console.log(a+b+c)');
+            fn(1,2,3);
+
+            //所有的函数都是Function的实例
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

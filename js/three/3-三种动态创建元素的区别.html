@@ -13,7 +13,7 @@
         * document.createElement();
         * 区别：
         *   1.document.wrote是直接将内容写入到页面的内容流，但是文档流执行完毕，则他会导致页面全部重绘
-        *   2.document.innerHTML() 是将内容写入到某个DOM节点，不会导致页面页面全部重绘
+        *   2-prototype.document.innerHTML() 是将内容写入到某个DOM节点，不会导致页面页面全部重绘
         *   3.document.innerHTML() 创建多个元素效率更高(不要拼接字符串，采取数组形式拼接)，结构稍微复杂
         *   4.document.createElement() 创建多个元素效率稍微低一点点，但是结构更清晰
         * 总结：不同浏览器下，innerHTML() 要比createElement高

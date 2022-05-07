@@ -22,7 +22,7 @@
         // （1）事件源   事件呗触发的对象   谁   按钮
         var btn = document.querySelector("#btn");
 
-        // （2）事件类型  如何触发  什么事件  比如鼠标点击(onclick)还是鼠标经过  还是键盘按下
+        // （2-prototype）事件类型  如何触发  什么事件  比如鼠标点击(onclick)还是鼠标经过  还是键盘按下
         // （3）事件处理程序  通过一个函数负值的方式  完成
         btn.onclick = function() {
             alert('我是唐伯虎，我要点秋香');
@@ -31,7 +31,7 @@
         /* 
             执行事件的步骤
             1.获取事件源
-            2.注册事件
+            2-prototype.注册事件
             3.天假事件处理程序（采取函数赋值的方式）
         */
         var divEle = document.querySelector("div");
