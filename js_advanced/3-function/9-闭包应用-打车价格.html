@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9-闭包应用-打车价格</title>
+    <script>
+        /*
+        *   闭包应用-计算打车价格
+        *   打车起步价13(3公里内)，之后每多一公里增加5块钱，用户输入公里数就可以计算打车价格
+        *   如果有拥堵情况，总价格多收取10块钱拥堵费
+        * */
+        window.addEventListener("load", function () {
+            var car = (function () {
+                var startPrice = 13;
+                var totalPrice = 0
+                return {
+                    startPrice: startPrice,
+                    totalPrice: totalPrice,
+                    price: function (n) {
+                        n > 3 ? this.totalPrice = this.startPrice + (n - 3) * 5 : this.totalPrice = this.startPrice;
+                        return this.totalPrice;
+                    },
+                    yd: function (n) {
+                        n > 3 ? this.totalPrice = this.startPrice + (n - 3) * 5 : this.totalPrice = this.startPrice;
+                        return this.totalPrice += 10;
+                    }
+                }
+            })();
+            console.log(car.totalPrice);
+            console.log("=======================");
+            console.log(car.price(10));
+            console.log(car.totalPrice);
+            console.log("=======================");
+            console.log(car.yd(10));
+            console.log(car.totalPrice);
+            console.log(car.totalPrice);
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
