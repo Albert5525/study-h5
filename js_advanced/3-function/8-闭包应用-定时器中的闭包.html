@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8-闭包应用-定时器中的闭包</title>
+    <script>
+        window.addEventListener("load", function () {
+            var lis = document.querySelectorAll(".nav li");
+            for (var i = 0; i < lis.length; i++) {
+                (function (i) {
+
+                    setInterval(function () {
+                        console.log(lis[i].innerHTML);
+                    }, 3000);
+                })(i);
+            }
+        });
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <li>11</li>
+        <li>22</li>
+        <li>33</li>
+        <li>44</li>
+    </ul>
+</body>
+</html>

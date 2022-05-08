@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-高阶函数-函数可以作为参数传递</title>
+    <script>
+        /*
+        *   高阶函数是对其他函数进行操作的函数，他接受函数作为参数或将函数作为返回值输出
+        *   <script>
+        *       function fn(callback){
+        *              callback&&callback;
+        *               }
+        *       fn(function(){alert("hi")})
+        *   <script>
+        *
+        *   <script>
+        *       function fn(){
+        *           return function(){}
+        *           }
+        *       fn();
+        *   <script>
+        *   此fn就是一个高阶函数
+        *   函数也是一种数据类型，同样可以作为参数，传递给另外一个参数使用。最典型的就是作为回调函数
+        *
+        * */
+
+        //高阶函数--函数可以作为参数传递
+        function f(a, b, callback) {
+            console.log(a + b);
+            callback && callback();
+        }
+        f(1,2,function () {
+            console.log("我是最后执行的额");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

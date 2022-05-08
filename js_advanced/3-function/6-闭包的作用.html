@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-闭包的作用</title>
+    <script>
+        /*
+        *   闭包的作用：延伸了变量的作用范围
+        * */
+        function f() {
+            var num=10;
+            return function () {
+                console.log(num);
+            }
+        }
+
+        f()();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

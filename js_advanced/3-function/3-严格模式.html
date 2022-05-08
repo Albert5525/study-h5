@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-严格模式</title>
+    <script>
+        /*
+        *   什么是严格模式
+        *   JavaScript除了提供正常模式外，还提供了严格模式(strict mode)。ES5的严格模式是采用具有限制性JavaScript辩题的一种方式，即在严格的条件下运行js代码
+        *
+        *   严格模式在IE10以上版本的浏览器中才会被支持，旧版本浏览器中会被忽略
+        *   严格模式对正常的JavaScript语义做了一些更改：
+        *       1.消除了JavaScript语法的一些不合理，不严谨之处，减少了一些怪异行为
+        *       2.消除了代码运行的一些不安全之处，保证代码运行的安全。
+        *       3.提高编译器效率，增加运行速度。
+        *       4.禁用了在CMAScript的未来版本中可能会定义的一些语法，为未来新版本的javaScript做好铺垫。
+        *           比如一些保留字如：class  enum   export  extends  import super不能做变量名。
+        *
+        * 严格模式可以应用到整个脚本或个别函数中，因此在使用时，我们可以讲严格模式分为为脚本开启严格模式和为函数开启严格模式两种情况
+        *   1.为脚本开启严格模式
+        *       为整个脚本文件开启严格模式，需要在所有语句之前放一个特定语句"user strict";或("use strict";).
+        *
+        * 严格模式下this指向问题：
+        *   1.以前在全局作用域函数中的this指向window对象
+        *   2.严格模式下全局作用于中函数中的this是undefined
+        *   3.以前构造函数不加new也可以调用，当普通函数，this指向全局对象
+        *   4.严格模式下，如果构造函数不加new调用，this会报错
+        *   5.new实例化的构造函数指向创建的对象实例
+        *   6.定时器指向的还是window
+        *   7.事件，对象还是指向调用者
+        * */
+        "use strict";
+        //整个脚本就会按照严格模式执行代码
+    </script>
+    <script>
+        //只有f是严格模式
+        function f() {
+            "use strict";
+        }
+        function f1() {
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

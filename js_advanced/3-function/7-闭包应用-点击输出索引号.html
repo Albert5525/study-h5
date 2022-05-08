@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-闭包应用-点击输出索引号</title>
+    <script>
+        window.addEventListener("load", function () {
+            var lis = document.querySelectorAll(".nav li");
+
+/*            //注意foreach天然就是闭包，因为forEach是一个高阶函数，forEach的参数是一个回调函数，在回调函数里面写函数是可以访问到回调函数的变量的
+            lis.forEach(function (li, key, lis) {
+                //forEach创建立即执行函数
+                //在这里闭包有两个，一个是立即执行函数，另一个是事件处理函数
+                //立即执行函数也称为小闭包因为立即执行函数里面的任何一个函数都可以使用它的index这个变量
+                (function (index) {
+                    li.addEventListener("click", function () {
+                        alert(index);
+                    });
+                })(key);
+            });*/
+            for (let i = 0; i < lis.length; i++) {
+                //创建立即执行函数
+                //在这里闭包有两个，一个是立即执行函数，另一个是事件处理函数
+                //立即执行函数也称为小闭包因为立即执行函数里面的任何一个函数都可以使用它的index这个变量
+                (function(index) {
+                    lis[index].addEventListener("click",function () {
+                        console.log(index);
+                    });
+                })(i);
+            }
+        });
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <li>apple</li>
+        <li>1</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

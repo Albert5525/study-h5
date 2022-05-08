@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-闭包思考</title>
+    <script>
+        //1
+        var name = "THE WINDOW";
+        var object = {
+            name: "the object",
+            getNameFunc: function () {
+                return function () {
+                    return this.name;
+                }
+            }
+        };
+        console.log(object.getNameFunc()());//THE WINDOW
+
+        var myObject = {
+            name: "the object",
+            getNameFunc: function () {
+                var that=this;
+                return function () {
+                    return that.name;
+                }
+            }
+        };
+        console.log(myObject.getNameFunc()());//the object
+    </script>
+</head>
+<body>
+
+</body>
+</html>
