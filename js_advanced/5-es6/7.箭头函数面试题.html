@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数面试题</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		var age = 100;
+		//注意：一定要注意箭头函数不绑定this关键字，箭头函数中的this，指向的是函数定义位置的上下文this
+		var obj = {
+			age: 20,
+			say: () => {
+				alert(this.age)
+			}
+		}
+
+		obj.say();
+	</script>
+</body>
+</html>
