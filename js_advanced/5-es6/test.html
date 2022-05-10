@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        const fn=()=>{
+            console.log(this);
+        };
+        const obj={
+            name:"张三"
+        };
+        fn.call(obj);
+
+        console.log("==========================================================================");
+        let [a,...b]=[1,2,3,4,5,6,7,8,9,0];
+        console.log(a);
+        console.log(b);
+
+
+        console.log("==========================================================================");
+        let arr1=[1,2,3];
+        let arr2=[4,5,6];
+        let arr3=[...arr1,...arr2];
+        console.log(arr3);
+        let arr4=[];
+        arr4.push('a');
+        console.log("arr4==="+arr4);
+        console.log(arr4);
+        console.log("==========================================================================");
+        let ary = [{
+            id: 1,
+            name: '张三'
+        }, {
+            id: 2,
+            name: '李四'
+        }];
+        console.log(ary.find(function (item) {
+            return item.id==2;
+        }));
+        console.log(ary.findIndex(function (item) {
+            return item.id > 1;
+        }));
+    </script>
+</body>
+</html>
