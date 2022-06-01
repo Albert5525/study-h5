@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_函数式组件</title>
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+
+    <script type="text/babel">
+        /*2.组件
+            理解：用来实现局部功能效果的代码和资源的集合（html/css/js/image等等）
+            为什么：一个界面的功能更复杂。
+            作用：复用代码，简化项目编码，提高运行效率
+        */
+        // 1.创建函数式组件
+        const FUNCOM = function demo() {
+            console.log(this);//这里的this是undefined，因为babel翻译之后开启了严格模式
+            return <h1>函数式组件，适用于简单组件的定义</h1>
+        }
+
+        // 2.渲染组件到页面
+        ReactDOM.render(<FUNCOM/>, document.getElementById("test"));
+
+        /*
+        *    执行了ReactDOM.render(<FUNCOM/>, document.getElementById("test"))...之后
+        *       1.React解析组件标签，找到了demo组件
+        *       2.发现组件是使用函数定义的，随后调用该函数，将反悔的虚拟DOM转为真实DOM，随后呈现在页面上
+        *
+        * */
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3_组件的三大核心属性--state</title>
+    <script src="../js/react.development.js"></script>
+    <script src="../js/react-dom.development.js"></script>
+    <script src="../js/babel.min.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        class Weather extends React.Component {
+            state = {
+                isHot: false,
+                wind: '微风'
+            }
+            /*changeWeather = function changeWeather() {
+                this.setState({isHot: !this.state.isHot});
+            }.bind(this);*/
+
+            //自定义方法----要用负值语句的形式+箭头函数，或者负值语句+函数.bind(this)，两者效果相同
+            //注意箭头函数本身是没有this，但是如果非要使用，则this就是箭头函数外侧的this，所以这个箭头函数的this就是Weather实例对象
+            changeWeather = () => {
+                console.log(this);
+                this.setState({isHot: !this.state.isHot});
+            }
+
+            render() {
+                return <h1 onClick={this.changeWeather}>今天天气很{this.state.isHot ? '炎热' : '凉爽'},{this.state.wind}</h1>
+            }
+
+
+        }
+
+        ReactDOM.render(<Weather/>, document.getElementById("test"));
+
+    </script>
+</body>
+</html>
