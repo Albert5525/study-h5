@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4_组件的三大核心属性--props</title>
+    <script src="../../js/react.development.js"></script>
+    <script src="../../js/react-dom.development.js"></script>
+    <script src="../../js/babel.min.js"></script>
+    <!--    引入prop-types.js  用于对足见标签进行限制-->
+    <script src="../../js/prop-types.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        class Person extends React.Component {
+            constructor(props) {
+                super(props);
+                //注意props属性只读的，下面的代码是错误的
+                // this.props.name='aaa';
+            }
+
+            render() {
+                console.log(this.props);
+                return (
+                    <ul>
+                        <li>{this.props.name}</li>
+                        <li>{this.props.age}</li>
+                        <li>{this.props.sex}</li>
+                    </ul>
+                );
+            }
+
+            /*            static propTypes = {
+                            name: PropTypes.string.isRequired,
+                            age: PropTypes.number.isRequired,
+                            sex: PropTypes.string.isRequired
+                        }
+                        static defaultProps = {
+                            name: "付世明",
+                            age: 18,
+                            sex: "男"
+                        }*/
+        }
+
+        //如果要对props进行类型上的限制，react规定必须要给组件加上propTypes属性，注意这个属性不是实例属性，而是类属性
+        // 可以直接在类中以赋值语句的形式写，前面加上static关键字
+        Person.propTypes = {
+            name: PropTypes.string.isRequired,
+            age: PropTypes.number.isRequired,
+            sex: PropTypes.string.isRequired,
+            speak:PropTypes.func
+        }
+        //如果要给props的属性加上默认的值，react规定必须给组件加上defaultProps属性，注意不是实例属性，而是类属性
+        // 可以直接在类中以赋值语句的形式写，前面加上static关键字
+        Person.defaultProps =  {
+            name: "付世明",
+            age: 18,
+            sex: "男"
+        }
+        const person = {name: "付世明", age: 18, sex: "男"};
+        function speak() {
+            console.log("speak....");
+        }
+        // ReactDOM.render(<Person name='付世明' age={18} sex='男'/>, document.getElementById("test"));
+        ReactDOM.render(<Person age={25} speak={speak} />, document.getElementById("test"));
+    </script>
+</body>
+</html>

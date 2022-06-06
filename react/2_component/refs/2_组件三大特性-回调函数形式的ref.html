@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2_组件三大特性-回调函数形式的ref</title>
+    <script src="../../js/react.development.js"></script>
+    <script src="../../js/react-dom.development.js"></script>
+    <script src="../../js/babel.min.js"></script>
+    <script src="../../js/prop-types.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        //创建组件
+        class MyComponent extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <input ref={(currentNode) => {
+                            this.input1 = currentNode
+                        }} type="text" placeholder="点击按钮显示数据"/>&nbsp;
+                        <button onClick={this.showData}>点我提示左侧输入的数据</button>
+                        &nbsp;
+                        <input ref={currentNode=>this.input2=currentNode} onBlur={this.showData2} type="text" placeholder="失去焦点显示数据"/>
+                    </div>
+                );
+            }
+
+            state = {}
+
+            //由于btnClick是作为onClick的回调，所以不是通过实例进行调用的，
+            //还有类中的方法默认是开启了严格模式，所以this为undefined，解决方法就是通过bind函数来进行改变this的指向或者通过箭头函数
+            //箭头本身是没有this的，如果还想使用this，那么这个this就是箭头函数外侧的this，那么在这里就是MyComponent实例
+            /*showData = function () {
+                alert("点击了" + this);
+            }.bind(this);*/
+            showData = () => {
+                console.log(this.input1.value);
+            }
+            showData2=()=>{
+                alert("showData2====>"+this.input2.value);
+            }
+
+        }
+
+        //渲染组件
+        ReactDOM.render(<MyComponent/>, document.getElementById("test"));
+    </script>
+</body>
+</html>

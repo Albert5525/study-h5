@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3_回调ref中执行次数的问题</title>
+    <script src="../../js/react.development.js"></script>
+    <script src="../../js/react-dom.development.js"></script>
+    <script src="../../js/babel.min.js"></script>
+    <script src="../../js/prop-types.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        class MyComponent extends React.Component {
+            count = 0;
+            state = {
+                isHot: true
+            }
+
+            render() {
+                return (
+                    <div>
+                        <h1>今天天气很{this.state.isHot ? '凉爽' : '炎热'}</h1>
+                        {/*下面这行代码属于内联形式的写法，如果是内联形式的写法，那么在组件状态更新是，会调用两次
+                        第一次的c为null，第二次的c为当前的节点，
+                        这样做的目的是为了避免组件状态更新时没有完全清楚原来的函数，所以先负值为null，然后在传入真实的节点
+                        也就是说第一次是为了清除原来的旧的函数，第二次是新的函数
+                        如何解决：
+                            内联形式更改为绑定在类身上的函数即可
+                        */}
+                        {/*<input ref={c => {this.input1 = c;console.log(c)}} type="text"/>*/}
+                        <input ref={this.saveInput} type="text"/>
+                        <button onClick={this.showData}>点我提示输入的数据</button>
+                        <button onClick={this.changeWeather}>点我切换天气</button>
+                    </div>
+                );
+            }
+
+            saveInput = (c) => {
+                console.log("c====" + c);
+                this.input1 = c;
+            }
+            showData = () => {
+                const {input1} = this;
+                this.count++;
+                console.log(this.count);
+                console.log(input1.value);
+            }
+            changeWeather = () => {
+                this.setState({
+                    isHot: !this.state.isHot
+                })
+            }
+        }
+
+        ReactDOM.render(<MyComponent/>, document.getElementById("test"));
+    </script>
+</body>
+</html>
