@@ -131,7 +131,7 @@
   /**
    * Keeps track of the current owner.
    *
-   * The current owner is the component who should own any components that are
+   * The current owner is the pages who should own any components that are
    * currently being constructed.
    */
   var ReactCurrentOwner = {
@@ -258,7 +258,7 @@
         return;
       }
 
-      error("Can't call %s on a component that is not yet mounted. " + 'This is a no-op, but it might indicate a bug in your application. ' + 'Instead, assign to `this.state` directly or define a `state = {};` ' + 'class property with the desired state in the %s component.', callerName, componentName);
+      error("Can't call %s on a pages that is not yet mounted. " + 'This is a no-op, but it might indicate a bug in your application. ' + 'Instead, assign to `this.state` directly or define a `state = {};` ' + 'class property with the desired state in the %s pages.', callerName, componentName);
 
       didWarnStateUpdateForUnmountedComponent[warningKey] = true;
     }
@@ -270,7 +270,7 @@
 
   var ReactNoopUpdateQueue = {
     /**
-     * Checks whether or not this composite component is mounted.
+     * Checks whether or not this composite pages is mounted.
      * @param {ReactClass} publicInstance The instance we want to test.
      * @return {boolean} True if mounted, false otherwise.
      * @protected
@@ -285,13 +285,13 @@
      * certainty that we are **not** in a DOM transaction.
      *
      * You may want to call this when you know that some deeper aspect of the
-     * component's state has changed but `setState` was not called.
+     * pages's state has changed but `setState` was not called.
      *
      * This will not invoke `shouldComponentUpdate`, but it will invoke
      * `componentWillUpdate` and `componentDidUpdate`.
      *
      * @param {ReactClass} publicInstance The instance that should rerender.
-     * @param {?function} callback Called after component is updated.
+     * @param {?function} callback Called after pages is updated.
      * @param {?string} callerName name of the calling function in the public API.
      * @internal
      */
@@ -308,7 +308,7 @@
      *
      * @param {ReactClass} publicInstance The instance that should rerender.
      * @param {object} completeState Next state.
-     * @param {?function} callback Called after component is updated.
+     * @param {?function} callback Called after pages is updated.
      * @param {?string} callerName name of the calling function in the public API.
      * @internal
      */
@@ -324,7 +324,7 @@
      *
      * @param {ReactClass} publicInstance The instance that should rerender.
      * @param {object} partialState Next partial state to be merged with state.
-     * @param {?function} callback Called after component is updated.
+     * @param {?function} callback Called after pages is updated.
      * @param {?string} Name of the calling function in the public API.
      * @internal
      */
@@ -339,13 +339,13 @@
     Object.freeze(emptyObject);
   }
   /**
-   * Base class helpers for the updating state of a component.
+   * Base class helpers for the updating state of a pages.
    */
 
 
   function Component(props, context, updater) {
     this.props = props;
-    this.context = context; // If a component has string refs, we will assign a different object later.
+    this.context = context; // If a pages has string refs, we will assign a different object later.
 
     this.refs = emptyObject; // We initialize the default updater but the real one gets injected by the
     // renderer.
@@ -368,7 +368,7 @@
    *
    * When a function is provided to setState, it will be called at some point in
    * the future (not synchronously). It will be called with the up to date
-   * component arguments (state, props, context). These values can be different
+   * pages arguments (state, props, context). These values can be different
    * from this.* because your function may be called after receiveProps but before
    * shouldComponentUpdate, and this new state, props, and context will not yet be
    * assigned to this.
@@ -394,7 +394,7 @@
    * certainty that we are **not** in a DOM transaction.
    *
    * You may want to call this when you know that some deeper aspect of the
-   * component's state has changed but `setState` was not called.
+   * pages's state has changed but `setState` was not called.
    *
    * This will not invoke `shouldComponentUpdate`, but it will invoke
    * `componentWillUpdate` and `componentDidUpdate`.
@@ -442,12 +442,12 @@
 
   ComponentDummy.prototype = Component.prototype;
   /**
-   * Convenience component with default shallow equality check for sCU.
+   * Convenience pages with default shallow equality check for sCU.
    */
 
   function PureComponent(props, context, updater) {
     this.props = props;
-    this.context = context; // If a component has string refs, we will assign a different object later.
+    this.context = context; // If a pages has string refs, we will assign a different object later.
 
     this.refs = emptyObject;
     this.updater = updater || ReactNoopUpdateQueue;
@@ -606,7 +606,7 @@
         if (!specialPropKeyWarningShown) {
           specialPropKeyWarningShown = true;
 
-          error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+          error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child pages, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
         }
       }
     };
@@ -624,7 +624,7 @@
         if (!specialPropRefWarningShown) {
           specialPropRefWarningShown = true;
 
-          error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+          error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child pages, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
         }
       }
     };
@@ -680,7 +680,7 @@
       key: key,
       ref: ref,
       props: props,
-      // Record the component responsible for creating this element.
+      // Record the pages responsible for creating this element.
       _owner: owner
     };
 
@@ -1359,7 +1359,7 @@
             return defaultProps;
           },
           set: function (newDefaultProps) {
-            error('React.lazy(...): It is not supported to assign `defaultProps` to ' + 'a lazy component import. Either specify them where the component ' + 'is defined, or create a wrapping component around it.');
+            error('React.lazy(...): It is not supported to assign `defaultProps` to ' + 'a lazy pages import. Either specify them where the pages ' + 'is defined, or create a wrapping pages around it.');
 
             defaultProps = newDefaultProps; // Match production behavior more closely:
             // $FlowFixMe
@@ -1375,7 +1375,7 @@
             return propTypes;
           },
           set: function (newPropTypes) {
-            error('React.lazy(...): It is not supported to assign `propTypes` to ' + 'a lazy component import. Either specify them where the component ' + 'is defined, or create a wrapping component around it.');
+            error('React.lazy(...): It is not supported to assign `propTypes` to ' + 'a lazy pages import. Either specify them where the pages ' + 'is defined, or create a wrapping pages around it.');
 
             propTypes = newPropTypes; // Match production behavior more closely:
             // $FlowFixMe
@@ -1394,7 +1394,7 @@
   function forwardRef(render) {
     {
       if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
-        error('forwardRef requires a render function but received a `memo` ' + 'component. Instead of forwardRef(memo(...)), use ' + 'memo(forwardRef(...)).');
+        error('forwardRef requires a render function but received a `memo` ' + 'pages. Instead of forwardRef(memo(...)), use ' + 'memo(forwardRef(...)).');
       } else if (typeof render !== 'function') {
         error('forwardRef requires a render function but was given %s.', render === null ? 'null' : typeof render);
       } else {
@@ -1405,7 +1405,7 @@
 
       if (render != null) {
         if (render.defaultProps != null || render.propTypes != null) {
-          error('forwardRef render functions do not support propTypes or defaultProps. ' + 'Did you accidentally pass a React component?');
+          error('forwardRef render functions do not support propTypes or defaultProps. ' + 'Did you accidentally pass a React pages?');
         }
       }
     }
@@ -1462,7 +1462,7 @@
   function memo(type, compare) {
     {
       if (!isValidElementType(type)) {
-        error('memo: The first argument must be a component. Instead ' + 'received: %s', type === null ? 'null' : typeof type);
+        error('memo: The first argument must be a pages. Instead ' + 'received: %s', type === null ? 'null' : typeof type);
       }
     }
 
@@ -1498,7 +1498,7 @@
 
     if (!(dispatcher !== null)) {
       {
-        throw Error( "Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem." );
+        throw Error( "Invalid hook call. Hooks can only be called inside of the body of a function pages. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem." );
       }
     }
 
@@ -1789,7 +1789,7 @@
             // If we're about to return the first line, and the control is also on the same
             // line, that's a pretty good indicator that our sample threw at same line as
             // the control. I.e. before we entered the sample frame. So we ignore this result.
-            // This can happen if you passed a class to function component, or non-function.
+            // This can happen if you passed a class to function pages, or non-function.
             if (s !== 1 || c !== 1) {
               do {
                 s--;
@@ -1880,7 +1880,7 @@
           return describeFunctionComponentFrame(type.render);
 
         case REACT_MEMO_TYPE:
-          // Memo may contain any component type so we recursively resolve it.
+          // Memo may contain any pages type so we recursively resolve it.
           return describeUnknownElementTypeFrameInDEV(type.type, source, ownerFn);
 
         case REACT_BLOCK_TYPE:
@@ -1893,7 +1893,7 @@
             var init = lazyComponent._init;
 
             try {
-              // Lazy may contain any component type so we recursively resolve it.
+              // Lazy may contain any pages type so we recursively resolve it.
               return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
             } catch (x) {}
           }
@@ -2067,7 +2067,7 @@
     var childOwner = '';
 
     if (element && element._owner && element._owner !== ReactCurrentOwner.current) {
-      // Give the component that originally created this child.
+      // Give the pages that originally created this child.
       childOwner = " It was passed a child from " + getComponentName(element._owner.type) + ".";
     }
 
@@ -2212,7 +2212,7 @@
       var info = '';
 
       if (type === undefined || typeof type === 'object' && type !== null && Object.keys(type).length === 0) {
-        info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
+        info += ' You likely forgot to export your pages from the file ' + "it's defined in, or you might have mixed up default and named imports.";
       }
 
       var sourceInfo = getSourceInfoErrorAddendumForProps(props);
@@ -2231,7 +2231,7 @@
         typeString = 'array';
       } else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
         typeString = "<" + (getComponentName(type.type) || 'Unknown') + " />";
-        info = ' Did you accidentally export a JSX literal instead of a component?';
+        info = ' Did you accidentally export a JSX literal instead of a pages?';
       } else {
         typeString = typeof type;
       }
